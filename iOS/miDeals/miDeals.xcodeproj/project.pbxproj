@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AD64B81139AD89A00E01398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B80139AD89A00E01398 /* UIKit.framework */; };
+		0AD64B83139AD89A00E01398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B82139AD89A00E01398 /* Foundation.framework */; };
+		0AD64B85139AD89A00E01398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B84139AD89A00E01398 /* CoreGraphics.framework */; };
+		0AD64B8B139AD89A00E01398 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64B89139AD89A00E01398 /* InfoPlist.strings */; };
+		0AD64B8E139AD89A00E01398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64B8D139AD89A00E01398 /* main.m */; };
+		0AD64B91139AD89A00E01398 /* miDealsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */; };
+		0AD64B94139AD89A00E01398 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64B92139AD89A00E01398 /* MainWindow.xib */; };
+		0AD64B97139AD89A00E01398 /* MILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64B96139AD89A00E01398 /* MILoginViewController.m */; };
+		0AD64B9A139AD89A00E01398 /* MILoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64B98139AD89A00E01398 /* MILoginViewController.xib */; };
+		0AD64BD5139ADA7B00E01398 /* UIAlertView+NWToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AD64B7C139AD89A00E01398 /* miDeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miDeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD64B80139AD89A00E01398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0AD64B82139AD89A00E01398 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0AD64B84139AD89A00E01398 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0AD64B88139AD89A00E01398 /* miDeals-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "miDeals-Info.plist"; sourceTree = "<group>"; };
+		0AD64B8A139AD89A00E01398 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AD64B8C139AD89A00E01398 /* miDeals-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "miDeals-Prefix.pch"; sourceTree = "<group>"; };
+		0AD64B8D139AD89A00E01398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AD64B8F139AD89A00E01398 /* miDealsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miDealsAppDelegate.h; sourceTree = "<group>"; };
+		0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = miDealsAppDelegate.m; sourceTree = "<group>"; };
+		0AD64B93139AD89A00E01398 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		0AD64B95139AD89A00E01398 /* MILoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MILoginViewController.h; sourceTree = "<group>"; };
+		0AD64B96139AD89A00E01398 /* MILoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MILoginViewController.m; sourceTree = "<group>"; };
+		0AD64B99139AD89A00E01398 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MILoginViewController.xib; sourceTree = "<group>"; };
+		0AD64BD3139ADA7B00E01398 /* UIAlertView+NWToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NWToolbox.h"; sourceTree = "<group>"; };
+		0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NWToolbox.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AD64B79139AD89A00E01398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD64B81139AD89A00E01398 /* UIKit.framework in Frameworks */,
+				0AD64B83139AD89A00E01398 /* Foundation.framework in Frameworks */,
+				0AD64B85139AD89A00E01398 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AD64B71139AD89A00E01398 = {
+			isa = PBXGroup;
+			children = (
+				0AD64B86139AD89A00E01398 /* miDeals */,
+				0AD64B7F139AD89A00E01398 /* Frameworks */,
+				0AD64B7D139AD89A00E01398 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AD64B7D139AD89A00E01398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64B7C139AD89A00E01398 /* miDeals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AD64B7F139AD89A00E01398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64B80139AD89A00E01398 /* UIKit.framework */,
+				0AD64B82139AD89A00E01398 /* Foundation.framework */,
+				0AD64B84139AD89A00E01398 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AD64B86139AD89A00E01398 /* miDeals */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64BD2139ADA6200E01398 /* Extensions */,
+				0AD64B8F139AD89A00E01398 /* miDealsAppDelegate.h */,
+				0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */,
+				0AD64B92139AD89A00E01398 /* MainWindow.xib */,
+				0AD64B95139AD89A00E01398 /* MILoginViewController.h */,
+				0AD64B96139AD89A00E01398 /* MILoginViewController.m */,
+				0AD64B98139AD89A00E01398 /* MILoginViewController.xib */,
+				0AD64B87139AD89A00E01398 /* Supporting Files */,
+			);
+			path = miDeals;
+			sourceTree = "<group>";
+		};
+		0AD64B87139AD89A00E01398 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64B88139AD89A00E01398 /* miDeals-Info.plist */,
+				0AD64B89139AD89A00E01398 /* InfoPlist.strings */,
+				0AD64B8C139AD89A00E01398 /* miDeals-Prefix.pch */,
+				0AD64B8D139AD89A00E01398 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AD64BD2139ADA6200E01398 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64BD3139ADA7B00E01398 /* UIAlertView+NWToolbox.h */,
+				0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AD64B7B139AD89A00E01398 /* miDeals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AD64B9D139AD89A00E01398 /* Build configuration list for PBXNativeTarget "miDeals" */;
+			buildPhases = (
+				0AD64B78139AD89A00E01398 /* Sources */,
+				0AD64B79139AD89A00E01398 /* Frameworks */,
+				0AD64B7A139AD89A00E01398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = miDeals;
+			productName = miDeals;
+			productReference = 0AD64B7C139AD89A00E01398 /* miDeals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AD64B73139AD89A00E01398 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0AD64B76139AD89A00E01398 /* Build configuration list for PBXProject "miDeals" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0AD64B71139AD89A00E01398;
+			productRefGroup = 0AD64B7D139AD89A00E01398 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AD64B7B139AD89A00E01398 /* miDeals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AD64B7A139AD89A00E01398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD64B8B139AD89A00E01398 /* InfoPlist.strings in Resources */,
+				0AD64B94139AD89A00E01398 /* MainWindow.xib in Resources */,
+				0AD64B9A139AD89A00E01398 /* MILoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AD64B78139AD89A00E01398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD64B8E139AD89A00E01398 /* main.m in Sources */,
+				0AD64B91139AD89A00E01398 /* miDealsAppDelegate.m in Sources */,
+				0AD64B97139AD89A00E01398 /* MILoginViewController.m in Sources */,
+				0AD64BD5139ADA7B00E01398 /* UIAlertView+NWToolbox.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0AD64B89139AD89A00E01398 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD64B8A139AD89A00E01398 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AD64B92139AD89A00E01398 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD64B93139AD89A00E01398 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		0AD64B98139AD89A00E01398 /* MILoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD64B99139AD89A00E01398 /* en */,
+			);
+			name = MILoginViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AD64B9B139AD89A00E01398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0AD64B9C139AD89A00E01398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		0AD64B9E139AD89A00E01398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
+				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0AD64B9F139AD89A00E01398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
+				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AD64B76139AD89A00E01398 /* Build configuration list for PBXProject "miDeals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AD64B9B139AD89A00E01398 /* Debug */,
+				0AD64B9C139AD89A00E01398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AD64B9D139AD89A00E01398 /* Build configuration list for PBXNativeTarget "miDeals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AD64B9E139AD89A00E01398 /* Debug */,
+				0AD64B9F139AD89A00E01398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AD64B73139AD89A00E01398 /* Project object */;
+}
