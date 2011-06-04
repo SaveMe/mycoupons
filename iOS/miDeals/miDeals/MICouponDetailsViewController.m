@@ -11,11 +11,24 @@
 
 @implementation MICouponDetailsViewController
 
+@synthesize coupon;
 #pragma mark - View lifecycle
 
+- (id)initWithCoupon:(MICoupon *)_coupon {
+    self = [super init];
+    if (self) {
+        self.coupon = _coupon;
+    }
+    return self;
+}
+
+- (void)dealloc {
+    self.coupon = nil;
+    [super dealloc];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    asyncImage = [[NWAsyncImageView alloc] init];
 }
 
 - (void)viewDidUnload {

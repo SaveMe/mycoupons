@@ -15,11 +15,11 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Add Coupons";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAddCoupon:)] autorelease];
 }
 

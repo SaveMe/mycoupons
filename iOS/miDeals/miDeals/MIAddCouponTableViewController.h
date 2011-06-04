@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MITableViewController.h"
 
-
-@interface MIAddCouponTableViewController : UITableViewController {
+@interface MIAddCouponTableViewController : MITableViewController {
     
 }
 

@@ -9,7 +9,7 @@
 #import "MICouponsTableViewController.h"
 #import "MIAddCouponTableViewController.h"
 #import "MICouponDetailsViewController.h"
-
+#import "MICouponTableViewCell.h"
 
 @implementation MICouponsTableViewController
 
@@ -18,7 +18,7 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-        
+        self.title = @"Coupons";
     }
     return self;
 }
@@ -32,7 +32,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationItem.prompt = @"";
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
 }
 
@@ -53,12 +52,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MICouponTableViewCell *cell = (MICouponTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[MICouponTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;   
     }
     
+    [cell configureWithCoupon:nil];
     // Configure the cell...
     cell.textLabel.text = [NSString stringWithFormat:@"Coupon %i", indexPath.row];
     return cell;

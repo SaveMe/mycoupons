@@ -20,7 +20,7 @@
 - (void)didLogin{
     [alert dismiss]; alert = nil;
     MICouponsTableViewController* viewController = [[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.navigationController setViewControllers:[NSArray arrayWithObject:viewController] animated:YES];
     [viewController release];
 }
 
@@ -35,6 +35,8 @@
 }
 
 - (void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"Login";
     [usernameTextField becomeFirstResponder];
 }
 

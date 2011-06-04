@@ -23,6 +23,31 @@
 		0AD64BE8139ADDA300E01398 /* MIAddCouponTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64BE6139ADDA300E01398 /* MIAddCouponTableViewController.xib */; };
 		0AD64BEC139ADDE600E01398 /* MICouponDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BEA139ADDE600E01398 /* MICouponDetailsViewController.m */; };
 		0AD64BED139ADDE600E01398 /* MICouponDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64BEB139ADDE600E01398 /* MICouponDetailsViewController.xib */; };
+		0AD64BF4139AE6A700E01398 /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BF3139AE6A700E01398 /* MIViewController.m */; };
+		0AD64BF8139AE70000E01398 /* MITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BF7139AE70000E01398 /* MITableViewController.m */; };
+		0AD64BFB139AE83200E01398 /* MICouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */; };
+		0AD64C2C139AE97B00E01398 /* NWAsyncImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C29139AE97B00E01398 /* NWAsyncImage.m */; };
+		0AD64C2D139AE97B00E01398 /* NWAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C2B139AE97B00E01398 /* NWAsyncImageView.m */; };
+		0AD64C36139AEA5800E01398 /* GDataHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C31139AEA5800E01398 /* GDataHTTPFetcher.m */; };
+		0AD64C37139AEA5800E01398 /* GDataHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C33139AEA5800E01398 /* GDataHTTPFetcherLogging.m */; };
+		0AD64C38139AEA5800E01398 /* GDataProgressMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C35139AEA5800E01398 /* GDataProgressMonitorInputStream.m */; };
+		0AD64C3B139AEA7E00E01398 /* NSString+NWToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C3A139AEA7E00E01398 /* NSString+NWToolbox.m */; };
+		0AD64C3E139AEA8B00E01398 /* NWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C3D139AEA8B00E01398 /* NWUtils.m */; };
+		0AD64C41139AEA9900E01398 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C40139AEA9900E01398 /* UIImageAdditions.m */; };
+		0AD64C44139AEAAD00E01398 /* NSData+NWToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C43139AEAAD00E01398 /* NSData+NWToolbox.m */; };
+		0AD64C46139AEAC900E01398 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64C45139AEAC800E01398 /* QuartzCore.framework */; };
+		0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C49139AEB9600E01398 /* MICoupon.m */; };
+		0AD64C56139AED2700E01398 /* DealMe-+-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C4C139AED2700E01398 /* DealMe-+-icon.png */; };
+		0AD64C57139AED2700E01398 /* DealMe->-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C4D139AED2700E01398 /* DealMe->-icon.png */; };
+		0AD64C58139AED2700E01398 /* DealMe-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C4E139AED2700E01398 /* DealMe-background.png */; };
+		0AD64C59139AED2700E01398 /* DealMe-Boom-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C4F139AED2700E01398 /* DealMe-Boom-Logo.png */; };
+		0AD64C5A139AED2700E01398 /* DealMe-Buy-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C50139AED2700E01398 /* DealMe-Buy-Logo.png */; };
+		0AD64C5B139AED2700E01398 /* DealMe-Groupon-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C51139AED2700E01398 /* DealMe-Groupon-Logo.png */; };
+		0AD64C5C139AED2700E01398 /* DealMe-Living-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C52139AED2700E01398 /* DealMe-Living-Logo.png */; };
+		0AD64C5D139AED2700E01398 /* DealMe-Logo-L.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C53139AED2700E01398 /* DealMe-Logo-L.png */; };
+		0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */; };
+		0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */; };
+		0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +76,45 @@
 		0AD64BE9139ADDE600E01398 /* MICouponDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICouponDetailsViewController.h; sourceTree = "<group>"; };
 		0AD64BEA139ADDE600E01398 /* MICouponDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICouponDetailsViewController.m; sourceTree = "<group>"; };
 		0AD64BEB139ADDE600E01398 /* MICouponDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MICouponDetailsViewController.xib; sourceTree = "<group>"; };
+		0AD64BF2139AE6A700E01398 /* MIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIViewController.h; sourceTree = "<group>"; };
+		0AD64BF3139AE6A700E01398 /* MIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIViewController.m; sourceTree = "<group>"; };
+		0AD64BF6139AE6FF00E01398 /* MITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITableViewController.h; sourceTree = "<group>"; };
+		0AD64BF7139AE70000E01398 /* MITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITableViewController.m; sourceTree = "<group>"; };
+		0AD64BF9139AE83100E01398 /* MICouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICouponTableViewCell.h; sourceTree = "<group>"; };
+		0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICouponTableViewCell.m; sourceTree = "<group>"; };
+		0AD64C28139AE97B00E01398 /* NWAsyncImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAsyncImage.h; sourceTree = "<group>"; };
+		0AD64C29139AE97B00E01398 /* NWAsyncImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWAsyncImage.m; sourceTree = "<group>"; };
+		0AD64C2A139AE97B00E01398 /* NWAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAsyncImageView.h; sourceTree = "<group>"; };
+		0AD64C2B139AE97B00E01398 /* NWAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWAsyncImageView.m; sourceTree = "<group>"; };
+		0AD64C2F139AEA5800E01398 /* GDataDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataDefines.h; sourceTree = "<group>"; };
+		0AD64C30139AEA5800E01398 /* GDataHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataHTTPFetcher.h; sourceTree = "<group>"; };
+		0AD64C31139AEA5800E01398 /* GDataHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataHTTPFetcher.m; sourceTree = "<group>"; };
+		0AD64C32139AEA5800E01398 /* GDataHTTPFetcherLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataHTTPFetcherLogging.h; sourceTree = "<group>"; };
+		0AD64C33139AEA5800E01398 /* GDataHTTPFetcherLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataHTTPFetcherLogging.m; sourceTree = "<group>"; };
+		0AD64C34139AEA5800E01398 /* GDataProgressMonitorInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataProgressMonitorInputStream.h; sourceTree = "<group>"; };
+		0AD64C35139AEA5800E01398 /* GDataProgressMonitorInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataProgressMonitorInputStream.m; sourceTree = "<group>"; };
+		0AD64C39139AEA7E00E01398 /* NSString+NWToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NWToolbox.h"; sourceTree = "<group>"; };
+		0AD64C3A139AEA7E00E01398 /* NSString+NWToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NWToolbox.m"; sourceTree = "<group>"; };
+		0AD64C3C139AEA8B00E01398 /* NWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUtils.h; sourceTree = "<group>"; };
+		0AD64C3D139AEA8B00E01398 /* NWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUtils.m; sourceTree = "<group>"; };
+		0AD64C3F139AEA9900E01398 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
+		0AD64C40139AEA9900E01398 /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAdditions.m; sourceTree = "<group>"; };
+		0AD64C42139AEAAD00E01398 /* NSData+NWToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NWToolbox.h"; sourceTree = "<group>"; };
+		0AD64C43139AEAAD00E01398 /* NSData+NWToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NWToolbox.m"; sourceTree = "<group>"; };
+		0AD64C45139AEAC800E01398 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0AD64C48139AEB9600E01398 /* MICoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICoupon.h; sourceTree = "<group>"; };
+		0AD64C49139AEB9600E01398 /* MICoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICoupon.m; sourceTree = "<group>"; };
+		0AD64C4C139AED2700E01398 /* DealMe-+-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-+-icon.png"; sourceTree = "<group>"; };
+		0AD64C4D139AED2700E01398 /* DealMe->-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe->-icon.png"; sourceTree = "<group>"; };
+		0AD64C4E139AED2700E01398 /* DealMe-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-background.png"; sourceTree = "<group>"; };
+		0AD64C4F139AED2700E01398 /* DealMe-Boom-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Boom-Logo.png"; sourceTree = "<group>"; };
+		0AD64C50139AED2700E01398 /* DealMe-Buy-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Buy-Logo.png"; sourceTree = "<group>"; };
+		0AD64C51139AED2700E01398 /* DealMe-Groupon-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Groupon-Logo.png"; sourceTree = "<group>"; };
+		0AD64C52139AED2700E01398 /* DealMe-Living-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Living-Logo.png"; sourceTree = "<group>"; };
+		0AD64C53139AED2700E01398 /* DealMe-Logo-L.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Logo-L.png"; sourceTree = "<group>"; };
+		0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Logo-S.png"; sourceTree = "<group>"; };
+		0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-twitter-icon.png"; sourceTree = "<group>"; };
+		0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD64C46139AEAC900E01398 /* QuartzCore.framework in Frameworks */,
 				0AD64B81139AD89A00E01398 /* UIKit.framework in Frameworks */,
 				0AD64B83139AD89A00E01398 /* Foundation.framework in Frameworks */,
 				0AD64B85139AD89A00E01398 /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +135,7 @@
 		0AD64B71139AD89A00E01398 = {
 			isa = PBXGroup;
 			children = (
+				0AD64C45139AEAC800E01398 /* QuartzCore.framework */,
 				0AD64B86139AD89A00E01398 /* miDeals */,
 				0AD64B7F139AD89A00E01398 /* Frameworks */,
 				0AD64B7D139AD89A00E01398 /* Products */,
@@ -97,6 +163,7 @@
 		0AD64B86139AD89A00E01398 /* miDeals */ = {
 			isa = PBXGroup;
 			children = (
+				0AD64C4B139AED2600E01398 /* Resources */,
 				0AD64BD2139ADA6200E01398 /* Extensions */,
 				0AD64B8F139AD89A00E01398 /* miDealsAppDelegate.h */,
 				0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */,
@@ -114,6 +181,13 @@
 				0AD64BE4139ADDA300E01398 /* MIAddCouponTableViewController.h */,
 				0AD64BE5139ADDA300E01398 /* MIAddCouponTableViewController.m */,
 				0AD64BE6139ADDA300E01398 /* MIAddCouponTableViewController.xib */,
+				0AD64BF2139AE6A700E01398 /* MIViewController.h */,
+				0AD64BF3139AE6A700E01398 /* MIViewController.m */,
+				0AD64BF6139AE6FF00E01398 /* MITableViewController.h */,
+				0AD64BF7139AE70000E01398 /* MITableViewController.m */,
+				0AD64C47139AEB8700E01398 /* Data Objects */,
+				0AD64BF9139AE83100E01398 /* MICouponTableViewCell.h */,
+				0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */,
 			);
 			path = miDeals;
 			sourceTree = "<group>";
@@ -132,10 +206,64 @@
 		0AD64BD2139ADA6200E01398 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0AD64C2E139AEA5800E01398 /* GData */,
+				0AD64C28139AE97B00E01398 /* NWAsyncImage.h */,
+				0AD64C29139AE97B00E01398 /* NWAsyncImage.m */,
+				0AD64C2A139AE97B00E01398 /* NWAsyncImageView.h */,
+				0AD64C2B139AE97B00E01398 /* NWAsyncImageView.m */,
 				0AD64BD3139ADA7B00E01398 /* UIAlertView+NWToolbox.h */,
 				0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */,
+				0AD64C39139AEA7E00E01398 /* NSString+NWToolbox.h */,
+				0AD64C3A139AEA7E00E01398 /* NSString+NWToolbox.m */,
+				0AD64C3C139AEA8B00E01398 /* NWUtils.h */,
+				0AD64C3D139AEA8B00E01398 /* NWUtils.m */,
+				0AD64C3F139AEA9900E01398 /* UIImageAdditions.h */,
+				0AD64C40139AEA9900E01398 /* UIImageAdditions.m */,
+				0AD64C42139AEAAD00E01398 /* NSData+NWToolbox.h */,
+				0AD64C43139AEAAD00E01398 /* NSData+NWToolbox.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0AD64C2E139AEA5800E01398 /* GData */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64C2F139AEA5800E01398 /* GDataDefines.h */,
+				0AD64C30139AEA5800E01398 /* GDataHTTPFetcher.h */,
+				0AD64C31139AEA5800E01398 /* GDataHTTPFetcher.m */,
+				0AD64C32139AEA5800E01398 /* GDataHTTPFetcherLogging.h */,
+				0AD64C33139AEA5800E01398 /* GDataHTTPFetcherLogging.m */,
+				0AD64C34139AEA5800E01398 /* GDataProgressMonitorInputStream.h */,
+				0AD64C35139AEA5800E01398 /* GDataProgressMonitorInputStream.m */,
+			);
+			path = GData;
+			sourceTree = "<group>";
+		};
+		0AD64C47139AEB8700E01398 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64C48139AEB9600E01398 /* MICoupon.h */,
+				0AD64C49139AEB9600E01398 /* MICoupon.m */,
+			);
+			name = "Data Objects";
+			sourceTree = "<group>";
+		};
+		0AD64C4B139AED2600E01398 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */,
+				0AD64C4C139AED2700E01398 /* DealMe-+-icon.png */,
+				0AD64C4D139AED2700E01398 /* DealMe->-icon.png */,
+				0AD64C4E139AED2700E01398 /* DealMe-background.png */,
+				0AD64C4F139AED2700E01398 /* DealMe-Boom-Logo.png */,
+				0AD64C50139AED2700E01398 /* DealMe-Buy-Logo.png */,
+				0AD64C51139AED2700E01398 /* DealMe-Groupon-Logo.png */,
+				0AD64C52139AED2700E01398 /* DealMe-Living-Logo.png */,
+				0AD64C53139AED2700E01398 /* DealMe-Logo-L.png */,
+				0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */,
+				0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +319,17 @@
 				0AD64BE2139ADD2500E01398 /* MICouponsTableViewController.xib in Resources */,
 				0AD64BE8139ADDA300E01398 /* MIAddCouponTableViewController.xib in Resources */,
 				0AD64BED139ADDE600E01398 /* MICouponDetailsViewController.xib in Resources */,
+				0AD64C56139AED2700E01398 /* DealMe-+-icon.png in Resources */,
+				0AD64C57139AED2700E01398 /* DealMe->-icon.png in Resources */,
+				0AD64C58139AED2700E01398 /* DealMe-background.png in Resources */,
+				0AD64C59139AED2700E01398 /* DealMe-Boom-Logo.png in Resources */,
+				0AD64C5A139AED2700E01398 /* DealMe-Buy-Logo.png in Resources */,
+				0AD64C5B139AED2700E01398 /* DealMe-Groupon-Logo.png in Resources */,
+				0AD64C5C139AED2700E01398 /* DealMe-Living-Logo.png in Resources */,
+				0AD64C5D139AED2700E01398 /* DealMe-Logo-L.png in Resources */,
+				0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */,
+				0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */,
+				0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +347,19 @@
 				0AD64BE1139ADD2500E01398 /* MICouponsTableViewController.m in Sources */,
 				0AD64BE7139ADDA300E01398 /* MIAddCouponTableViewController.m in Sources */,
 				0AD64BEC139ADDE600E01398 /* MICouponDetailsViewController.m in Sources */,
+				0AD64BF4139AE6A700E01398 /* MIViewController.m in Sources */,
+				0AD64BF8139AE70000E01398 /* MITableViewController.m in Sources */,
+				0AD64BFB139AE83200E01398 /* MICouponTableViewCell.m in Sources */,
+				0AD64C2C139AE97B00E01398 /* NWAsyncImage.m in Sources */,
+				0AD64C2D139AE97B00E01398 /* NWAsyncImageView.m in Sources */,
+				0AD64C36139AEA5800E01398 /* GDataHTTPFetcher.m in Sources */,
+				0AD64C37139AEA5800E01398 /* GDataHTTPFetcherLogging.m in Sources */,
+				0AD64C38139AEA5800E01398 /* GDataProgressMonitorInputStream.m in Sources */,
+				0AD64C3B139AEA7E00E01398 /* NSString+NWToolbox.m in Sources */,
+				0AD64C3E139AEA8B00E01398 /* NWUtils.m in Sources */,
+				0AD64C41139AEA9900E01398 /* UIImageAdditions.m in Sources */,
+				0AD64C44139AEAAD00E01398 /* NSData+NWToolbox.m in Sources */,
+				0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

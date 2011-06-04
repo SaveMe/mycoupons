@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIViewController.h"
 
-@interface MILoginViewController : UIViewController <UITextFieldDelegate> {
+@interface MILoginViewController : MIViewController <UITextFieldDelegate> {
 
     IBOutlet UITextField *usernameTextField;
     IBOutlet UITextField *passwordTextField;

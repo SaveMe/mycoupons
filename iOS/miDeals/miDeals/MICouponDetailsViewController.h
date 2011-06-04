@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIViewController.h"
+#import "NWAsyncImageView.h"
+#import "MICoupon.h"
 
-
-@interface MICouponDetailsViewController : UIViewController {
-    
+@interface MICouponDetailsViewController : MIViewController {
+    NWAsyncImageView* asyncImage;
 }
+
+@property (nonatomic, retain) MICoupon* coupon;
 
 @end
