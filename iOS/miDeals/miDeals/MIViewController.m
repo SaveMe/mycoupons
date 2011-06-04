@@ -13,6 +13,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.title = @"Deal Me";
     UIImageView* backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-background.png"]];
     [self.view insertSubview:backImageView atIndex:0];
     [backImageView release];

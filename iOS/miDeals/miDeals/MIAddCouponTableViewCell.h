@@ -1,5 +1,5 @@
 //
-//  MITableViewController.h
+//  MIAddCouponTableViewCell.h
 //  miDeals
 //
 //  Created by Jorn van Dijk on 05-06-11.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MITableViewController : UITableViewController {
-    UILabel* headerLabel;
+@interface MIAddCouponTableViewCell : UITableViewCell {
+    
 }
 
 @end

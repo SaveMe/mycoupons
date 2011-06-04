@@ -48,6 +48,7 @@
 		0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */; };
 		0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */; };
 		0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */; };
+		0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Logo-S.png"; sourceTree = "<group>"; };
 		0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-twitter-icon.png"; sourceTree = "<group>"; };
 		0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder.png"; sourceTree = "<group>"; };
+		0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAddCouponTableViewCell.h; sourceTree = "<group>"; };
+		0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAddCouponTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				0AD64C47139AEB8700E01398 /* Data Objects */,
 				0AD64BF9139AE83100E01398 /* MICouponTableViewCell.h */,
 				0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */,
+				0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */,
+				0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */,
 			);
 			path = miDeals;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				0AD64C41139AEA9900E01398 /* UIImageAdditions.m in Sources */,
 				0AD64C44139AEAAD00E01398 /* NSData+NWToolbox.m in Sources */,
 				0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */,
+				0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

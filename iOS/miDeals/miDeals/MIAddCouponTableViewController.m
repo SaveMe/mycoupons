@@ -8,6 +8,8 @@
 
 #import "MIAddCouponTableViewController.h"
 #import "MILoginViewController.h"
+#import "MIAddCouponTableViewCell.h"
+
 
 @implementation MIAddCouponTableViewController
 
@@ -19,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Add Coupons";
+    headerLabel.text = @"Add Accounts";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAddCoupon:)] autorelease];
 }
 
@@ -36,21 +38,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MIAddCouponTableViewCell *cell = (MIAddCouponTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[[MIAddCouponTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Coupon Service No %i", indexPath.row];
-    // Configure the cell...
+   // cell.textLabel.text = [NSString stringWithFormat:@"Coupon Service No %i", indexPath.row];
     
+    switch (indexPath.row) {
+        case 0:
+            cell.imageView.image = [UIImage imageNamed:@"DealMe-Boom-Logo.png"];
+            break;
+        case 1:
+            cell.imageView.image = [UIImage imageNamed:@"DealMe-Buy-Logo.png"];
+            break;
+        case 2:
+            cell.imageView.image = [UIImage imageNamed:@"DealMe-Groupon-Logo.png"];
+            break;
+        case 3:
+        default:
+            cell.imageView.image = [UIImage imageNamed:@"DealMe-Living-Logo.png"];
+            break;
+    }
     return cell;
 }
 

@@ -18,7 +18,6 @@
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Coupons";
     }
     return self;
 }
@@ -32,6 +31,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    headerLabel.text = @"My Deals";
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
 }
 
@@ -54,13 +54,12 @@
     
     MICouponTableViewCell *cell = (MICouponTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[MICouponTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[MICouponTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;   
     }
     
     [cell configureWithCoupon:nil];
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"Coupon %i", indexPath.row];
     return cell;
 }
 
