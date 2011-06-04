@@ -17,6 +17,12 @@
 		0AD64B97139AD89A00E01398 /* MILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64B96139AD89A00E01398 /* MILoginViewController.m */; };
 		0AD64B9A139AD89A00E01398 /* MILoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64B98139AD89A00E01398 /* MILoginViewController.xib */; };
 		0AD64BD5139ADA7B00E01398 /* UIAlertView+NWToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */; };
+		0AD64BE1139ADD2500E01398 /* MICouponsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BDF139ADD2500E01398 /* MICouponsTableViewController.m */; };
+		0AD64BE2139ADD2500E01398 /* MICouponsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64BE0139ADD2500E01398 /* MICouponsTableViewController.xib */; };
+		0AD64BE7139ADDA300E01398 /* MIAddCouponTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BE5139ADDA300E01398 /* MIAddCouponTableViewController.m */; };
+		0AD64BE8139ADDA300E01398 /* MIAddCouponTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64BE6139ADDA300E01398 /* MIAddCouponTableViewController.xib */; };
+		0AD64BEC139ADDE600E01398 /* MICouponDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64BEA139ADDE600E01398 /* MICouponDetailsViewController.m */; };
+		0AD64BED139ADDE600E01398 /* MICouponDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64BEB139ADDE600E01398 /* MICouponDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,15 @@
 		0AD64B99139AD89A00E01398 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MILoginViewController.xib; sourceTree = "<group>"; };
 		0AD64BD3139ADA7B00E01398 /* UIAlertView+NWToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NWToolbox.h"; sourceTree = "<group>"; };
 		0AD64BD4139ADA7B00E01398 /* UIAlertView+NWToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NWToolbox.m"; sourceTree = "<group>"; };
+		0AD64BDE139ADD2500E01398 /* MICouponsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICouponsTableViewController.h; sourceTree = "<group>"; };
+		0AD64BDF139ADD2500E01398 /* MICouponsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICouponsTableViewController.m; sourceTree = "<group>"; };
+		0AD64BE0139ADD2500E01398 /* MICouponsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MICouponsTableViewController.xib; sourceTree = "<group>"; };
+		0AD64BE4139ADDA300E01398 /* MIAddCouponTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAddCouponTableViewController.h; sourceTree = "<group>"; };
+		0AD64BE5139ADDA300E01398 /* MIAddCouponTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAddCouponTableViewController.m; sourceTree = "<group>"; };
+		0AD64BE6139ADDA300E01398 /* MIAddCouponTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIAddCouponTableViewController.xib; sourceTree = "<group>"; };
+		0AD64BE9139ADDE600E01398 /* MICouponDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICouponDetailsViewController.h; sourceTree = "<group>"; };
+		0AD64BEA139ADDE600E01398 /* MICouponDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICouponDetailsViewController.m; sourceTree = "<group>"; };
+		0AD64BEB139ADDE600E01398 /* MICouponDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MICouponDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +105,15 @@
 				0AD64B96139AD89A00E01398 /* MILoginViewController.m */,
 				0AD64B98139AD89A00E01398 /* MILoginViewController.xib */,
 				0AD64B87139AD89A00E01398 /* Supporting Files */,
+				0AD64BDE139ADD2500E01398 /* MICouponsTableViewController.h */,
+				0AD64BDF139ADD2500E01398 /* MICouponsTableViewController.m */,
+				0AD64BE0139ADD2500E01398 /* MICouponsTableViewController.xib */,
+				0AD64BE9139ADDE600E01398 /* MICouponDetailsViewController.h */,
+				0AD64BEA139ADDE600E01398 /* MICouponDetailsViewController.m */,
+				0AD64BEB139ADDE600E01398 /* MICouponDetailsViewController.xib */,
+				0AD64BE4139ADDA300E01398 /* MIAddCouponTableViewController.h */,
+				0AD64BE5139ADDA300E01398 /* MIAddCouponTableViewController.m */,
+				0AD64BE6139ADDA300E01398 /* MIAddCouponTableViewController.xib */,
 			);
 			path = miDeals;
 			sourceTree = "<group>";
@@ -164,6 +188,9 @@
 				0AD64B8B139AD89A00E01398 /* InfoPlist.strings in Resources */,
 				0AD64B94139AD89A00E01398 /* MainWindow.xib in Resources */,
 				0AD64B9A139AD89A00E01398 /* MILoginViewController.xib in Resources */,
+				0AD64BE2139ADD2500E01398 /* MICouponsTableViewController.xib in Resources */,
+				0AD64BE8139ADDA300E01398 /* MIAddCouponTableViewController.xib in Resources */,
+				0AD64BED139ADDE600E01398 /* MICouponDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +205,9 @@
 				0AD64B91139AD89A00E01398 /* miDealsAppDelegate.m in Sources */,
 				0AD64B97139AD89A00E01398 /* MILoginViewController.m in Sources */,
 				0AD64BD5139ADA7B00E01398 /* UIAlertView+NWToolbox.m in Sources */,
+				0AD64BE1139ADD2500E01398 /* MICouponsTableViewController.m in Sources */,
+				0AD64BE7139ADDA300E01398 /* MIAddCouponTableViewController.m in Sources */,
+				0AD64BEC139ADDE600E01398 /* MICouponDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +320,7 @@
 				0AD64B9F139AD89A00E01398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

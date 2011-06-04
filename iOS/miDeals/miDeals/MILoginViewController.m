@@ -8,16 +8,25 @@
 
 #import "MILoginViewController.h"
 #import "UIAlertView+NWToolbox.h"
+#import "MICouponsTableViewController.h"
 
 @implementation MILoginViewController
 
 - (void)shouldLogin{
     // TODO login request
-    [self performSelector:@selector(didLogin:) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(didLogin) withObject:nil afterDelay:2.0];
 }
 
+- (void)didLogin{
+    [alert dismiss]; alert = nil;
+    MICouponsTableViewController* viewController = [[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
+}
+
+
 - (void)cancelLogin{
-    [alert dismiss];
+    [alert dismiss]; alert = nil;
 }
 
 - (IBAction)loginAction:(id)sender {
