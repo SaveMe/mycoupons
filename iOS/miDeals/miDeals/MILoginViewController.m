@@ -14,7 +14,7 @@
 
 - (void)shouldLogin{
     // TODO login request
-    [self performSelector:@selector(didLogin) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(didLogin) withObject:nil afterDelay:0.5];
 }
 
 - (void)didLogin{
