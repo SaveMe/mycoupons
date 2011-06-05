@@ -48,6 +48,7 @@
 		0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */; };
 		0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */; };
 		0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */; };
+		D74C3E63139AFDFB001101A2 /* MIBackendConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Logo-S.png"; sourceTree = "<group>"; };
 		0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-twitter-icon.png"; sourceTree = "<group>"; };
 		0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder.png"; sourceTree = "<group>"; };
+		D74C3E61139AFDFB001101A2 /* MIBackendConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MIBackendConnection.h; sourceTree = "<group>"; };
+		D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBackendConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 			children = (
 				0AD64C4B139AED2600E01398 /* Resources */,
 				0AD64BD2139ADA6200E01398 /* Extensions */,
+				D74C3E5D139AFDEC001101A2 /* Backend */,
 				0AD64B8F139AD89A00E01398 /* miDealsAppDelegate.h */,
 				0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */,
 				0AD64B92139AD89A00E01398 /* MainWindow.xib */,
@@ -266,6 +270,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D74C3E5D139AFDEC001101A2 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				D74C3E61139AFDFB001101A2 /* MIBackendConnection.h */,
+				D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +373,7 @@
 				0AD64C41139AEA9900E01398 /* UIImageAdditions.m in Sources */,
 				0AD64C44139AEAAD00E01398 /* NSData+NWToolbox.m in Sources */,
 				0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */,
+				D74C3E63139AFDFB001101A2 /* MIBackendConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
