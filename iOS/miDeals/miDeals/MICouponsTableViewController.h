@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MITableViewController.h"
+#import "MIBackendConnection.h"
 
-@interface MICouponsTableViewController : MITableViewController {
+@interface MICouponsTableViewController : MITableViewController <MIFetchDealsDelegate> {
+    MIBackendConnection *connection;
     NSArray* coupons;
+    UIAlertView *alert;
 }
+
+@property (nonatomic, retain) MIBackendConnection *connection;
 
 @end

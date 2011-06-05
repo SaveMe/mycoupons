@@ -37,10 +37,14 @@
 }
 
 - (MICoupon *)parseDealJson:(NSDictionary *)dict {
-    MICoupon *result = [[[MICoupon alloc] init] autorelease];
-    result.title = [dict objectForKey:@"name"];
-    result.desc = [dict objectForKey:@"description"];
-    return result;
+    NSString *title = [dict objectForKey:@"name"];
+    if (title && ![title isKindOfClass:[NSNull class]]) {
+        MICoupon *result = [[[MICoupon alloc] init] autorelease];
+        result.title = [dict objectForKey:@"name"];
+        result.desc = [dict objectForKey:@"description"];
+        return result;
+    }
+    return nil;
 }
 
 - (BOOL)parseLoginResponseData:(NSData *)data error:(NSError **)error {
@@ -57,11 +61,12 @@
     }
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:array.count];
     for (NSDictionary *dict in array) {
-        NSDictionary *dictionary = [data objectFromJSONData];
+        NSDictionary *dictionary = [dict objectForKey:@"deal"];
         MICoupon *coupon = [self parseDealJson:dictionary];
-        [result addObject:coupon];
+        if (coupon)
+            [result addObject:coupon];
     }
-    return array;
+    return result;
 }
 
 - (BOOL)isLoggedIn {
@@ -96,7 +101,7 @@
 
 - (void)fetchDealsWithDelegate:(id<MIFetchDealsDelegate>)delegate {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deals.json"]];
-    [request setHTTPMethod:@"POST"];
+    [request setHTTPMethod:@"GET"];
     [request setTimeoutInterval:30];
     [request setValue:authToken forHTTPHeaderField:@"auth_token"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
@@ -117,7 +122,7 @@
 
 - (void)fetchDealWithId:(NSString *)dealId delegate:(id<MIFetchDealsDelegate>)delegate {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:SERVER_URL "deal/%@.json", dealId]]];
-    [request setHTTPMethod:@"POST"];
+    [request setHTTPMethod:@"GET"];
     [request setTimeoutInterval:30];
     [request setValue:authToken forHTTPHeaderField:@"auth_token"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
