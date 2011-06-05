@@ -15,12 +15,14 @@
 @private
     NSString *username;
     NSString *password;
-    NSString *sessionID;
+    NSString *authToken;
 }
 @property (readonly) BOOL isLoggedIn;
 - (id)initWithUsername:(NSString *)username password:(NSString *)password;
 + (id)connectionWithUsername:(NSString *)username password:(NSString *)password;
+// 1. login
 - (void)loginWithDelegate:(id<MILoginDelegate>)delegate;
+// 2. get the coupons
 - (void)fetchDealsWithDelegate:(id<MIFetchDealsDelegate>)delegate;
 - (void)fetchDealWithId:(NSString *)dealId delegate:(id<MIFetchDealsDelegate>)delegate;
 @end

@@ -15,7 +15,6 @@
 
 #define DDErrorAssign(__description, ...) {if (error) {*error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]];}}
 
-#define ERROR(__text) [NSError
 @implementation MIBackendConnection
 
 - (id)initWithUsername:(NSString *)_username password:(NSString *)_password {
@@ -37,39 +36,45 @@
     [super dealloc];
 }
 
+- (MICoupon *)parseDealJson:(NSDictionary *)dict {
+    MICoupon *result = [[[MICoupon alloc] init] autorelease];
+    result.title = [dict objectForKey:@"name"];
+    result.desc = [dict objectForKey:@"description"];
+    return result;
+}
+
 - (BOOL)parseLoginResponseData:(NSData *)data error:(NSError **)error {
-    // TODO
-    sessionID = [NSString stringWithFormat:@"%.*s", data.length, data.bytes];
+    // TODO get authentication_token from dictionary
+    NSLog(@"login response: %.*s", data.length, data.bytes);
     return YES;
 }
 
 - (NSArray *)parseDealsResponseData:(NSData *)data error:(NSError **)error {
-    id array = [data objectFromJSONData];
+    NSArray *array = [data objectFromJSONData];
     if(![array isKindOfClass:NSArray.class]){
         DDErrorAssign(@"Expecting a array in response: %.*s", data.length, data.bytes);
         return nil;
+    }
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:array.count];
+    for (NSDictionary *dict in array) {
+        NSDictionary *dictionary = [data objectFromJSONData];
+        MICoupon *coupon = [self parseDealJson:dictionary];
+        [result addObject:coupon];
     }
     return array;
 }
 
 - (BOOL)isLoggedIn {
-    return sessionID != nil;
+    return authToken != nil;
 }
 
 - (MICoupon *)parseDealResponseData:(NSData *)data error:(NSError **)error {
-    id dictionary = [data objectFromJSONData];
-    if(![dictionary isKindOfClass:NSDictionary.class]){
-        DDErrorAssign(@"Expecting a dictionary in response: %.*s", data.length, data.bytes);
-        return nil;
-    }
-    MICoupon *coupon = [[[MICoupon alloc] init] autorelease];
-    coupon.desc = @"todo";
-    return coupon;
+    NSDictionary *dictionary = [data objectFromJSONData];
+    return [self parseDealJson:dictionary];
 }
 
-
 - (void)loginWithDelegate:(id<MILoginDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "users/sign_in"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "users/sign_in.json"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
     [request setValue:username forHTTPHeaderField:@"user[email]"];
@@ -90,10 +95,10 @@
 }
 
 - (void)fetchDealsWithDelegate:(id<MIFetchDealsDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deals"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deals.json"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:sessionID forHTTPHeaderField:@"session"];
+    [request setValue:authToken forHTTPHeaderField:@"auth_token"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
@@ -111,10 +116,10 @@
 }
 
 - (void)fetchDealWithId:(NSString *)dealId delegate:(id<MIFetchDealsDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deal"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:SERVER_URL "deal/%@.json", dealId]]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:sessionID forHTTPHeaderField:@"session"];
+    [request setValue:authToken forHTTPHeaderField:@"auth_token"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
