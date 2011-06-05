@@ -57,11 +57,6 @@
 		D78B639D139B0CD300F476FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D78B639B139B0CD300F476FB /* InfoPlist.strings */; };
 		D78B63A0139B0CD300F476FB /* Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = D78B639F139B0CD300F476FB /* Tests.h */; };
 		D78B63A2139B0CD300F476FB /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B63A1139B0CD300F476FB /* Tests.m */; };
-		D78B63A8139B0EDC00F476FB /* MIBackendConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */; };
-		D78B63A9139B0EE100F476FB /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B635D139B08C800F476FB /* JSONKit.m */; };
-		D78B63AA139B0EF700F476FB /* GDataHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C31139AEA5800E01398 /* GDataHTTPFetcher.m */; };
-		D78B63AB139B0EF700F476FB /* GDataHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C33139AEA5800E01398 /* GDataHTTPFetcherLogging.m */; };
-		D78B63AC139B0EF700F476FB /* GDataProgressMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C35139AEA5800E01398 /* GDataProgressMonitorInputStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -498,11 +493,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78B63A2139B0CD300F476FB /* Tests.m in Sources */,
-				D78B63A8139B0EDC00F476FB /* MIBackendConnection.m in Sources */,
-				D78B63A9139B0EE100F476FB /* JSONKit.m in Sources */,
-				D78B63AA139B0EF700F476FB /* GDataHTTPFetcher.m in Sources */,
-				D78B63AB139B0EF700F476FB /* GDataHTTPFetcherLogging.m in Sources */,
-				D78B63AC139B0EF700F476FB /* GDataProgressMonitorInputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +623,7 @@
 					SenTestingKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -658,6 +649,7 @@
 					SenTestingKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -690,6 +682,7 @@
 				D78B63A5139B0CD300F476FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
