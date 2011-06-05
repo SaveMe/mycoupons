@@ -13,11 +13,7 @@
 
 #define SERVER_URL @"http://mycoupons.heroku.com/"
 
-#define DDErrorAssign(__description, ...) { \
-    if (error) { \
-        *error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]]; \
-    } \
-}
+#define DDErrorAssign(__description, ...) {if (error) {*error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]];}}
 
 #define ERROR(__text) [NSError
 @implementation MIBackendConnection
