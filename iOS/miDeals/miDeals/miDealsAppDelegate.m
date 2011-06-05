@@ -11,7 +11,7 @@
 @implementation miDealsAppDelegate
 
 
-@synthesize window=_window;
+@synthesize window=_window, connection=_connection;
 
 @synthesize navigationController=_navigationController;
 
@@ -65,9 +65,14 @@
 
 - (void)dealloc
 {
+    [_connection release];
     [_window release];
     [_navigationController release];
     [super dealloc];
+}
+
+- (void)loginViewController:(MILoginViewController*)vc didFinishWithConnection:(MIBackendConnection*)theConnection {
+    self.connection = theConnection;
 }
 
 @end

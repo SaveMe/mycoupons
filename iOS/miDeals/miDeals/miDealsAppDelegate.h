@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIBackendConnection.h"
+#import "MILoginViewController.h"
 
-@interface miDealsAppDelegate : NSObject <UIApplicationDelegate> {
+@interface miDealsAppDelegate : NSObject <UIApplicationDelegate, MILoginDelegate> {
 
 }
-
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) IBOutlet MIBackendConnection* connection;
 
 @end
