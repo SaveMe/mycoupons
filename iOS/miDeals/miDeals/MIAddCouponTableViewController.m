@@ -9,7 +9,7 @@
 #import "MIAddCouponTableViewController.h"
 #import "MILoginViewController.h"
 #import "MIAddCouponTableViewCell.h"
-
+#import "MIHeaderView.h"
 
 @implementation MIAddCouponTableViewController
 
@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    headerLabel.text = @"Add Accounts";
+    headerView.headerLabel.text = @"Add Accounts";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAddCoupon:)] autorelease];
 }
 
@@ -113,19 +113,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES]; 
     MILoginViewController *detailViewController = [[MILoginViewController alloc] init];
+    
     switch (indexPath.row) {
         case 0:
-            detailViewController.title = @"Boom";
+            detailViewController.title = @"Bloomspot";
             break;
         case 1:
-            detailViewController.title = @"Buy";
+            detailViewController.title = @"BuyWithMe";
             break;
         case 2:
             detailViewController.title = @"Groupon";
             break;
         case 3:
         default:
-            detailViewController.title = @"Living";
+            detailViewController.title = @"Livingsocial";
             break;
     }
     

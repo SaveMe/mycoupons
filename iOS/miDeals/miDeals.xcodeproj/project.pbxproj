@@ -49,6 +49,10 @@
 		0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */; };
 		0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */; };
 		0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */; };
+		0AD64C6F139B035700E01398 /* DealMe-Barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C6D139B035600E01398 /* DealMe-Barcode.png */; };
+		0AD64C70139B035700E01398 /* DealMe-Priceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C6E139B035600E01398 /* DealMe-Priceholder.png */; };
+		0AD64C72139B06A900E01398 /* NWBackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C71139B06A800E01398 /* NWBackArrow.png */; };
+		0AD64C75139B072F00E01398 /* MIHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C74139B072C00E01398 /* MIHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,11 @@
 		0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder.png"; sourceTree = "<group>"; };
 		0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAddCouponTableViewCell.h; sourceTree = "<group>"; };
 		0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAddCouponTableViewCell.m; sourceTree = "<group>"; };
+		0AD64C6D139B035600E01398 /* DealMe-Barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Barcode.png"; sourceTree = "<group>"; };
+		0AD64C6E139B035600E01398 /* DealMe-Priceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Priceholder.png"; sourceTree = "<group>"; };
+		0AD64C71139B06A800E01398 /* NWBackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NWBackArrow.png; sourceTree = "<group>"; };
+		0AD64C73139B072A00E01398 /* MIHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHeaderView.h; sourceTree = "<group>"; };
+		0AD64C74139B072C00E01398 /* MIHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +147,6 @@
 		0AD64B71139AD89A00E01398 = {
 			isa = PBXGroup;
 			children = (
-				0AD64C45139AEAC800E01398 /* QuartzCore.framework */,
 				0AD64B86139AD89A00E01398 /* miDeals */,
 				0AD64B7F139AD89A00E01398 /* Frameworks */,
 				0AD64B7D139AD89A00E01398 /* Products */,
@@ -156,6 +164,7 @@
 		0AD64B7F139AD89A00E01398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AD64C45139AEAC800E01398 /* QuartzCore.framework */,
 				0AD64B80139AD89A00E01398 /* UIKit.framework */,
 				0AD64B82139AD89A00E01398 /* Foundation.framework */,
 				0AD64B84139AD89A00E01398 /* CoreGraphics.framework */,
@@ -168,13 +177,14 @@
 			children = (
 				0AD64C4B139AED2600E01398 /* Resources */,
 				0AD64BD2139ADA6200E01398 /* Extensions */,
+				0AD64B87139AD89A00E01398 /* Supporting Files */,
+				0AD64C47139AEB8700E01398 /* Data Objects */,
 				0AD64B8F139AD89A00E01398 /* miDealsAppDelegate.h */,
 				0AD64B90139AD89A00E01398 /* miDealsAppDelegate.m */,
 				0AD64B92139AD89A00E01398 /* MainWindow.xib */,
 				0AD64B95139AD89A00E01398 /* MILoginViewController.h */,
 				0AD64B96139AD89A00E01398 /* MILoginViewController.m */,
 				0AD64B98139AD89A00E01398 /* MILoginViewController.xib */,
-				0AD64B87139AD89A00E01398 /* Supporting Files */,
 				0AD64BDE139ADD2500E01398 /* MICouponsTableViewController.h */,
 				0AD64BDF139ADD2500E01398 /* MICouponsTableViewController.m */,
 				0AD64BE0139ADD2500E01398 /* MICouponsTableViewController.xib */,
@@ -188,7 +198,8 @@
 				0AD64BF3139AE6A700E01398 /* MIViewController.m */,
 				0AD64BF6139AE6FF00E01398 /* MITableViewController.h */,
 				0AD64BF7139AE70000E01398 /* MITableViewController.m */,
-				0AD64C47139AEB8700E01398 /* Data Objects */,
+				0AD64C73139B072A00E01398 /* MIHeaderView.h */,
+				0AD64C74139B072C00E01398 /* MIHeaderView.m */,
 				0AD64BF9139AE83100E01398 /* MICouponTableViewCell.h */,
 				0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */,
 				0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */,
@@ -256,6 +267,9 @@
 		0AD64C4B139AED2600E01398 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AD64C71139B06A800E01398 /* NWBackArrow.png */,
+				0AD64C6D139B035600E01398 /* DealMe-Barcode.png */,
+				0AD64C6E139B035600E01398 /* DealMe-Priceholder.png */,
 				0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */,
 				0AD64C4C139AED2700E01398 /* DealMe-+-icon.png */,
 				0AD64C4D139AED2700E01398 /* DealMe->-icon.png */,
@@ -335,6 +349,9 @@
 				0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */,
 				0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */,
 				0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */,
+				0AD64C6F139B035700E01398 /* DealMe-Barcode.png in Resources */,
+				0AD64C70139B035700E01398 /* DealMe-Priceholder.png in Resources */,
+				0AD64C72139B06A900E01398 /* NWBackArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +383,7 @@
 				0AD64C44139AEAAD00E01398 /* NSData+NWToolbox.m in Sources */,
 				0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */,
 				0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */,
+				0AD64C75139B072F00E01398 /* MIHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
