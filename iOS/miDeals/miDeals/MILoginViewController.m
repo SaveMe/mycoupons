@@ -58,7 +58,7 @@
     [self.view insertSubview:backImageView atIndex:0];
     [backImageView release];
 #ifdef DEBUG_FAST_FORWARD
-    usernameTextField.text = @"martijn@noodlewerk.com";
+    usernameTextField.text = @"team@noodlewerk.com";
     passwordTextField.text = @"12345678";
 #endif    
     [loginButton setBackgroundImage:[[UIImage imageNamed:@"DealMe-Login-Button.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
