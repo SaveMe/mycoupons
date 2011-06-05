@@ -48,9 +48,31 @@
 		0AD64C5E139AED2700E01398 /* DealMe-Logo-S.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */; };
 		0AD64C5F139AED2700E01398 /* DealMe-twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */; };
 		0AD64C61139AEF6200E01398 /* DealMe-Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */; };
-		D74C3E63139AFDFB001101A2 /* MIBackendConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */; };
 		0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */; };
+		D74C3E63139AFDFB001101A2 /* MIBackendConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */; };
+		D78B635E139B08C800F476FB /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B635D139B08C800F476FB /* JSONKit.m */; };
+		D78B6395139B0CD300F476FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B80139AD89A00E01398 /* UIKit.framework */; };
+		D78B6396139B0CD300F476FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B82139AD89A00E01398 /* Foundation.framework */; };
+		D78B6397139B0CD300F476FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B84139AD89A00E01398 /* CoreGraphics.framework */; };
+		D78B639D139B0CD300F476FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D78B639B139B0CD300F476FB /* InfoPlist.strings */; };
+		D78B63A0139B0CD300F476FB /* Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = D78B639F139B0CD300F476FB /* Tests.h */; };
+		D78B63A2139B0CD300F476FB /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B63A1139B0CD300F476FB /* Tests.m */; };
+		D78B63A8139B0EDC00F476FB /* MIBackendConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */; };
+		D78B63A9139B0EE100F476FB /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B635D139B08C800F476FB /* JSONKit.m */; };
+		D78B63AA139B0EF700F476FB /* GDataHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C31139AEA5800E01398 /* GDataHTTPFetcher.m */; };
+		D78B63AB139B0EF700F476FB /* GDataHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C33139AEA5800E01398 /* GDataHTTPFetcherLogging.m */; };
+		D78B63AC139B0EF700F476FB /* GDataProgressMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD64C35139AEA5800E01398 /* GDataProgressMonitorInputStream.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D78B63A6139B0CF400F476FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AD64B73139AD89A00E01398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AD64B7B139AD89A00E01398;
+			remoteInfo = miDeals;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0AD64B7C139AD89A00E01398 /* miDeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miDeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,10 +139,18 @@
 		0AD64C54139AED2700E01398 /* DealMe-Logo-S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Logo-S.png"; sourceTree = "<group>"; };
 		0AD64C55139AED2700E01398 /* DealMe-twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-twitter-icon.png"; sourceTree = "<group>"; };
 		0AD64C60139AEF6200E01398 /* DealMe-Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder.png"; sourceTree = "<group>"; };
-		D74C3E61139AFDFB001101A2 /* MIBackendConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MIBackendConnection.h; sourceTree = "<group>"; };
-		D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBackendConnection.m; sourceTree = "<group>"; };
 		0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAddCouponTableViewCell.h; sourceTree = "<group>"; };
 		0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAddCouponTableViewCell.m; sourceTree = "<group>"; };
+		D74C3E61139AFDFB001101A2 /* MIBackendConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBackendConnection.h; sourceTree = "<group>"; };
+		D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBackendConnection.m; sourceTree = "<group>"; };
+		D78B635C139B08C800F476FB /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D78B635D139B08C800F476FB /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D78B6394139B0CD200F476FB /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78B639A139B0CD300F476FB /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		D78B639C139B0CD300F476FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D78B639E139B0CD300F476FB /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		D78B639F139B0CD300F476FB /* Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tests.h; sourceTree = "<group>"; };
+		D78B63A1139B0CD300F476FB /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +165,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D78B6390139B0CD200F476FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78B6395139B0CD300F476FB /* UIKit.framework in Frameworks */,
+				D78B6396139B0CD300F476FB /* Foundation.framework in Frameworks */,
+				D78B6397139B0CD300F476FB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +183,7 @@
 			children = (
 				0AD64C45139AEAC800E01398 /* QuartzCore.framework */,
 				0AD64B86139AD89A00E01398 /* miDeals */,
+				D78B6398139B0CD300F476FB /* Tests */,
 				0AD64B7F139AD89A00E01398 /* Frameworks */,
 				0AD64B7D139AD89A00E01398 /* Products */,
 			);
@@ -152,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD64B7C139AD89A00E01398 /* miDeals.app */,
+				D78B6394139B0CD200F476FB /* Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,10 +320,32 @@
 		D74C3E5D139AFDEC001101A2 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				D78B635C139B08C800F476FB /* JSONKit.h */,
+				D78B635D139B08C800F476FB /* JSONKit.m */,
 				D74C3E61139AFDFB001101A2 /* MIBackendConnection.h */,
 				D74C3E62139AFDFB001101A2 /* MIBackendConnection.m */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		D78B6398139B0CD300F476FB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D78B639F139B0CD300F476FB /* Tests.h */,
+				D78B63A1139B0CD300F476FB /* Tests.m */,
+				D78B6399139B0CD300F476FB /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D78B6399139B0CD300F476FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D78B639A139B0CD300F476FB /* Tests-Info.plist */,
+				D78B639B139B0CD300F476FB /* InfoPlist.strings */,
+				D78B639E139B0CD300F476FB /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +368,25 @@
 			productReference = 0AD64B7C139AD89A00E01398 /* miDeals.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D78B6393139B0CD200F476FB /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78B63A3139B0CD300F476FB /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				D78B638F139B0CD200F476FB /* Sources */,
+				D78B6390139B0CD200F476FB /* Frameworks */,
+				D78B6391139B0CD200F476FB /* Resources */,
+				D78B6392139B0CD200F476FB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D78B63A7139B0CF400F476FB /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = D78B6394139B0CD200F476FB /* Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -322,6 +405,7 @@
 			projectRoot = "";
 			targets = (
 				0AD64B7B139AD89A00E01398 /* miDeals */,
+				D78B6393139B0CD200F476FB /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,7 +435,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D78B6391139B0CD200F476FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78B639D139B0CD300F476FB /* InfoPlist.strings in Resources */,
+				D78B63A0139B0CD300F476FB /* Tests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D78B6392139B0CD200F476FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AD64B78139AD89A00E01398 /* Sources */ = {
@@ -380,10 +489,32 @@
 				0AD64C4A139AEB9600E01398 /* MICoupon.m in Sources */,
 				D74C3E63139AFDFB001101A2 /* MIBackendConnection.m in Sources */,
 				0AD64C64139AF27A00E01398 /* MIAddCouponTableViewCell.m in Sources */,
+				D78B635E139B08C800F476FB /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78B638F139B0CD200F476FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78B63A2139B0CD300F476FB /* Tests.m in Sources */,
+				D78B63A8139B0EDC00F476FB /* MIBackendConnection.m in Sources */,
+				D78B63A9139B0EE100F476FB /* JSONKit.m in Sources */,
+				D78B63AA139B0EF700F476FB /* GDataHTTPFetcher.m in Sources */,
+				D78B63AB139B0EF700F476FB /* GDataHTTPFetcherLogging.m in Sources */,
+				D78B63AC139B0EF700F476FB /* GDataProgressMonitorInputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D78B63A7139B0CF400F476FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AD64B7B139AD89A00E01398 /* miDeals */;
+			targetProxy = D78B63A6139B0CF400F476FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0AD64B89139AD89A00E01398 /* InfoPlist.strings */ = {
@@ -408,6 +539,14 @@
 				0AD64B99139AD89A00E01398 /* en */,
 			);
 			name = MILoginViewController.xib;
+			sourceTree = "<group>";
+		};
+		D78B639B139B0CD300F476FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78B639C139B0CD300F476FB /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -473,6 +612,56 @@
 			};
 			name = Release;
 		};
+		D78B63A4139B0CD300F476FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/miDeals.app/miDeals";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D78B63A5139B0CD300F476FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/miDeals.app/miDeals";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,6 +682,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D78B63A3139B0CD300F476FB /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78B63A4139B0CD300F476FB /* Debug */,
+				D78B63A5139B0CD300F476FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

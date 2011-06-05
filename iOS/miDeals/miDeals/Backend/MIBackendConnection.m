@@ -8,9 +8,18 @@
 
 #import "MIBackendConnection.h"
 #import "GDataHTTPFetcher.h"
+#import "JSONKit.h"
+#import "MICoupon.h"
 
 #define SERVER_URL @"http://mycoupons.heroku.com/"
 
+#define DDErrorAssign(__description, ...) { \
+    if (error) { \
+        *error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]]; \
+    } \
+}
+
+#define ERROR(__text) [NSError
 @implementation MIBackendConnection
 
 - (id)initWithUsername:(NSString *)_username password:(NSString *)_password {
@@ -34,12 +43,28 @@
 
 - (BOOL)parseLoginResponseData:(NSData *)data error:(NSError **)error {
     // TODO
-    return NO;
+    sessionID = [NSString stringWithFormat:@"%.*s", data.length, data.bytes];
+    return YES;
 }
 
 - (NSArray *)parseDealsResponseData:(NSData *)data error:(NSError **)error {
-    // TODO
-    return NO;
+    id array = [data objectFromJSONData];
+    if(![array isKindOfClass:NSArray.class]){
+        DDErrorAssign(@"Expecting a array in response: %.*s", data.length, data.bytes);
+        return nil;
+    }
+    return array;
+}
+
+- (MICoupon *)parseDealResponseData:(NSData *)data error:(NSError **)error {
+    id dictionary = [data objectFromJSONData];
+    if(![dictionary isKindOfClass:NSDictionary.class]){
+        DDErrorAssign(@"Expecting a dictionary in response: %.*s", data.length, data.bytes);
+        return nil;
+    }
+    MICoupon *coupon = [[[MICoupon alloc] init] autorelease];
+    coupon.desc = @"todo";
+    return coupon;
 }
 
 
@@ -66,8 +91,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deals"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:username forHTTPHeaderField:@"username"];
-    [request setValue:password forHTTPHeaderField:@"password"];
+    [request setValue:sessionID forHTTPHeaderField:@"session"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
@@ -83,11 +107,10 @@
 }
 
 - (void)fetchDealWithId:(NSString *)dealId delegate:(id<MIFetchDealsDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deals"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "deal"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:username forHTTPHeaderField:@"username"];
-    [request setValue:password forHTTPHeaderField:@"password"];
+    [request setValue:sessionID forHTTPHeaderField:@"session"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
