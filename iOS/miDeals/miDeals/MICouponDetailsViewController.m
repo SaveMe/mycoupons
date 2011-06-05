@@ -7,6 +7,8 @@
 //
 
 #import "MICouponDetailsViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "MIHeaderView.h"
 
 
 @implementation MICouponDetailsViewController
@@ -27,19 +29,31 @@
     [scrollView release];
     [asyncImage release];
     [titleLabel release];
-    [subTitleLabel release];
     [descriptionLabel release];
+    [dateLabel release];
+    [priceLabel release];
+    [couponCodeImageView release];
+    [couponCodeLabel release];
     [super dealloc];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    scrollView.contentSize = CGSizeMake(320, 600);
-
+    
+    MIHeaderView* headerView = [[[MIHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
+    [self.view addSubview:headerView];
+    headerView.headerLabel.text = @"";
+    
+    scrollView.layer.borderColor = [[UIColor colorWithWhite:1 alpha:0.28] CGColor];
+    scrollView.layer.borderWidth = 1.0;
+    
+    
     NSURL* url = [NSURL URLWithString:coupon.imageURLString];
     [asyncImage loadImageFromURL:url withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Placeholder.png"]];
+    NSURL* barcodeurl = [NSURL URLWithString:coupon.imageURLString];
+    [couponCodeImageView loadImageFromURL:barcodeurl withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Barcode.png"]];
+
     if(coupon){
         titleLabel.text = coupon.title;
-        subTitleLabel.text = coupon.subtitle;
         descriptionLabel.text = coupon.desc;
     }
 }
@@ -51,10 +65,16 @@
     asyncImage = nil;
     [titleLabel release];
     titleLabel = nil;
-    [subTitleLabel release];
-    subTitleLabel = nil;
     [descriptionLabel release];
     descriptionLabel = nil;
+    [dateLabel release];
+    dateLabel = nil;
+    [priceLabel release];
+    priceLabel = nil;
+    [couponCodeImageView release];
+    couponCodeImageView = nil;
+    [couponCodeLabel release];
+    couponCodeLabel = nil;
     [super viewDidUnload];
 }
 

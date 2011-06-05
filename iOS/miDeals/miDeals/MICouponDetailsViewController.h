@@ -13,10 +13,13 @@
 
 @interface MICouponDetailsViewController : MIViewController {
     IBOutlet UIScrollView *scrollView;
+    IBOutlet UILabel *dateLabel;
     IBOutlet NWAsyncImageView *asyncImage;
+    IBOutlet UILabel *priceLabel;
     IBOutlet UILabel *titleLabel;
-    IBOutlet UILabel *subTitleLabel;
     IBOutlet UILabel *descriptionLabel;
+    IBOutlet NWAsyncImageView *couponCodeImageView;
+    IBOutlet UILabel *couponCodeLabel;
 }
 
 @property (nonatomic, retain) MICoupon* coupon;

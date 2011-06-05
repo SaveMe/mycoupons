@@ -1,5 +1,5 @@
 //
-//  MITableViewController.h
+//  MIHeaderView.h
 //  miDeals
 //
 //  Created by Jorn van Dijk on 05-06-11.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MIHeaderView.h"
 
-@interface MITableViewController : UITableViewController {
-    MIHeaderView* headerView;
+
+@interface MIHeaderView : UIView {
+    
 }
 
+@property (nonatomic, retain) UILabel* headerLabel;
 @end

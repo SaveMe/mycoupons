@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MITableViewController.h"
 
+@class MIHeaderView;
+
 @interface MIAddCouponTableViewController : MITableViewController {
-    
 }
 
 @end

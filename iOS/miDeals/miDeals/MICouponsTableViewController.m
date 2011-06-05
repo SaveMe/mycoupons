@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    headerLabel.text = @"My Deals";
+    headerView.headerLabel.text = @"My Deals";
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
 }
 

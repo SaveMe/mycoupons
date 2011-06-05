@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MIViewController.h"
 #import "MIBackendConnection.h"
 
 @protocol MILoginViewControllerDelegate;
 
-@interface MILoginViewController : MIViewController <UITextFieldDelegate, MILoginDelegate> {
+@interface MILoginViewController : UIViewController <UITextFieldDelegate, MILoginDelegate> {
 
     IBOutlet UILabel *problemLabel;
     IBOutlet UITextField *usernameTextField;
@@ -20,6 +19,7 @@
     IBOutlet UIButton *loginButton;
     UIAlertView* alert;
     
+    IBOutlet UIScrollView *scrollView;
     MIBackendConnection* connection;
 }
 @property (nonatomic, assign) id <MILoginViewControllerDelegate> delegate;

@@ -41,6 +41,8 @@
         connection = [[MIBackendConnection alloc] initWithUsername:usernameTextField.text password:passwordTextField.text];
         [connection loginWithDelegate:self];
         alert = [UIAlertView showActivityAlertWithTitle:@"Logging in" message:@"Hang on..."];
+        // Debug
+        [self performSelector:@selector(loginFinished) withObject:nil afterDelay:1.0];
     } else {
         [UIAlertView showBasicAlertWithTitle:nil message:problem];
     }
@@ -48,7 +50,14 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [usernameTextField becomeFirstResponder];
+    
+    UIImageView* backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-background.png"]];
+    backImageView.frame = CGRectMake(0, 44, 320, 416);
+    [self.view insertSubview:backImageView atIndex:0];
+    [backImageView release];
+
+    
+    [loginButton setBackgroundImage:[[UIImage imageNamed:@"DealMe-Login-Button.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
 }
 
 - (void)dealloc {
@@ -57,6 +66,7 @@
     [passwordTextField release];
     [problemLabel release];
     [connection release]; connection = nil;
+    [scrollView release];
     [super dealloc];
 }
 
@@ -69,8 +79,16 @@
     passwordTextField = nil;
     [problemLabel release];
     problemLabel = nil;
+    [scrollView release];
+    scrollView = nil;
    [super viewDidUnload];
 }
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    [scrollView setContentOffset:CGPointMake(0, 140) animated:YES];
+    return YES;
+}
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if(textField == usernameTextField){
@@ -87,9 +105,7 @@
 
 - (void)loginFinished {
     [alert dismiss]; alert = nil;
-    MICouponsTableViewController* viewController = [[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self.navigationController setViewControllers:[NSArray arrayWithObject:viewController] animated:YES];
-    [viewController release];
+    [delegate loginViewController:self didFinishWithConnection:nil];
 }
 
 - (void)loginFailedWithError:(NSError*)error {

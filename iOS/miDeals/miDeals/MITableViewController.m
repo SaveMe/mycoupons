@@ -7,31 +7,44 @@
 //
 
 #import "MITableViewController.h"
-
+#import "MIHeaderView.h"
 
 @implementation MITableViewController
 
+
+- (void)__setup{
+    self.title = @"Deal Me";
+    UIImage* backArrowImage = [UIImage imageNamed:@"NWBackArrow.png"];
+    UIBarButtonItem* barbuttonItem = [[UIBarButtonItem alloc] initWithImage:backArrowImage style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [barbuttonItem autorelease];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self __setup];
+    }
+    return self;
+}
+
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        [self __setup];
+    }
+    return self;
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"Deal Me";
+
     self.tableView.backgroundColor = [UIColor clearColor];
     UIImageView* backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-background.png"]];
     self.tableView.backgroundView = backImageView;
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.28];
     [backImageView release];
     
-    UIView* headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
-    UIImageView* imageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-Logo-S.png"]] autorelease];
-    [headerView addSubview:imageView];
-    imageView.frame = CGRectMake(15, 2, 54, 61);
-    headerLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 45)] autorelease];
-    [headerView addSubview:headerLabel];
-    headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.textAlignment = UITextAlignmentCenter;
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.font = [UIFont boldSystemFontOfSize:14];
-    headerLabel.numberOfLines = 0;
-    headerLabel.text = @"More information";
+    headerView = [[[MIHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
     self.tableView.tableHeaderView = headerView;
     
 }
