@@ -13,11 +13,7 @@
 
 #define SERVER_URL @"http://mycoupons.heroku.com/"
 
-#define DDErrorAssign(__description, ...) { \
-    if (error) { \
-        *error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]]; \
-    } \
-}
+#define DDErrorAssign(__description, ...) {if (error) {*error = [NSError errorWithDomain:@"mi" code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:(__description),##__VA_ARGS__,@""],NSLocalizedDescriptionKey,nil]];}}
 
 #define ERROR(__text) [NSError
 @implementation MIBackendConnection
@@ -56,6 +52,10 @@
     return array;
 }
 
+- (BOOL)isLoggedIn {
+    return sessionID != nil;
+}
+
 - (MICoupon *)parseDealResponseData:(NSData *)data error:(NSError **)error {
     id dictionary = [data objectFromJSONData];
     if(![dictionary isKindOfClass:NSDictionary.class]){
@@ -69,19 +69,21 @@
 
 
 - (void)loginWithDelegate:(id<MILoginDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "sign_in"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "users/sign_in"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:username forHTTPHeaderField:@"username"];
-    [request setValue:password forHTTPHeaderField:@"password"];
+    [request setValue:username forHTTPHeaderField:@"user[email]"];
+    [request setValue:password forHTTPHeaderField:@"user[password]"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate loginFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         if (![self parseLoginResponseData:data error:&parseError]) {
-            [delegate loginFailedWithError:parseError];            
+            [delegate loginFailedWithError:parseError];    
+            return;
         }
         [delegate loginFinished];
     }];
@@ -96,11 +98,13 @@
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate fetchDealsFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         NSArray *deals = [self parseDealsResponseData:data error:&parseError];
         if (!deals) {
-            [delegate fetchDealsFailedWithError:parseError];            
+            [delegate fetchDealsFailedWithError:parseError];
+            return;
         }
         [delegate fetchDealsFinishedWithDeals:deals];
     }];    
@@ -115,11 +119,13 @@
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate fetchDealsFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         NSArray *deals = [self parseDealsResponseData:data error:&parseError];
         if (!deals) {
-            [delegate fetchDealsFailedWithError:parseError];            
+            [delegate fetchDealsFailedWithError:parseError];
+            return;
         }
         [delegate fetchDealsFinishedWithDeals:deals];
     }];    

@@ -10,6 +10,8 @@
 #import "UIAlertView+NWToolbox.h"
 #import "MICouponsTableViewController.h"
 
+#define DEBUG_FAST_FORWARD
+
 @implementation MILoginViewController
 @synthesize delegate, connection;
 
@@ -55,8 +57,10 @@
     backImageView.frame = CGRectMake(0, 44, 320, 416);
     [self.view insertSubview:backImageView atIndex:0];
     [backImageView release];
-
-    
+#ifdef DEBUG_FAST_FORWARD
+    usernameTextField.text = @"team@noodlewerk.com";
+    passwordTextField.text = @"12345678";
+#endif    
     [loginButton setBackgroundImage:[[UIImage imageNamed:@"DealMe-Login-Button.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
 }
 

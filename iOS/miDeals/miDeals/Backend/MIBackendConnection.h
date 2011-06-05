@@ -17,6 +17,7 @@
     NSString *password;
     NSString *sessionID;
 }
+@property (readonly) BOOL isLoggedIn;
 - (id)initWithUsername:(NSString *)username password:(NSString *)password;
 + (id)connectionWithUsername:(NSString *)username password:(NSString *)password;
 - (void)loginWithDelegate:(id<MILoginDelegate>)delegate;

@@ -7,30 +7,31 @@
 //
 
 #import "Tests.h"
+#import "MICoupon.h"
 
 @implementation Tests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    
-    // Set-up code here.
+    connection = [[MIBackendConnection connectionWithUsername:@"testuser" password:@"testpass"] retain];
 }
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
+- (void)tearDown {
+    [connection release]; connection = nil;
     [super tearDown];
 }
 
 - (void)testBackend {
-    MIBackendConnection *connection = [MIBackendConnection connectionWithUsername:@"testuser" password:@"testpass"];
     [connection loginWithDelegate:self];
+    while (!connection.isLoggedIn) {
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"waiting");
+    }
 }
 
 - (void)loginFinished {
-    
+    // now fetch all deals
+    [connection fetchDealsWithDelegate:self];
 }
 
 - (void)loginFailedWithError:(NSError *)error {
@@ -38,19 +39,22 @@
 }
 
 - (void)fetchDealsFinishedWithDeals:(NSArray *)deals {
-    
+//    MICoupon *coupon = [deals objectAtIndex:0];
+    NSString *dealID = @"todoID";
+    [connection fetchDealWithId:dealID delegate:self];
 }
 
 - (void)fetchDealsFailedWithError:(NSError *)error {
-    
+    STFail(@"dealS failed: %@", error);
 }
 
 - (void)fetchDealFinishedWithDeals:(MICoupon *)deal {
-    
+    STAssertNotNil(deal, @"deal not properly fetched");
+    // TODO logout
 }
 
 - (void)fetchDealFailedWithError:(NSError *)error {
-    
+    STFail(@"deal failed: %@", error);
 }
 
 @end
