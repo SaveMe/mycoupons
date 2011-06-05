@@ -109,7 +109,7 @@
 
 - (void)loginFinished {
     [alert dismiss]; alert = nil;
-    [delegate loginViewController:self didFinishWithConnection:nil];
+    [delegate loginViewController:self didFinishWithConnection:connection];
 }
 
 - (void)loginFailedWithError:(NSError*)error {
