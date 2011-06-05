@@ -83,7 +83,7 @@
 		0AA450F4139B102E007F4556 /* MITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITextField.h; sourceTree = "<group>"; };
 		0AA450F5139B102E007F4556 /* MITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITextField.m; sourceTree = "<group>"; };
 		0AA450FF139B1754007F4556 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0AD64B7C139AD89A00E01398 /* miDeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miDeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD64B7C139AD89A00E01398 /* Deal Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deal Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD64B80139AD89A00E01398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0AD64B82139AD89A00E01398 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0AD64B84139AD89A00E01398 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,7 +204,7 @@
 		0AD64B7D139AD89A00E01398 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AD64B7C139AD89A00E01398 /* miDeals.app */,
+				0AD64B7C139AD89A00E01398 /* Deal Me.app */,
 				D78B6394139B0CD200F476FB /* Tests.octest */,
 			);
 			name = Products;
@@ -388,7 +388,7 @@
 			);
 			name = miDeals;
 			productName = miDeals;
-			productReference = 0AD64B7C139AD89A00E01398 /* miDeals.app */;
+			productReference = 0AD64B7C139AD89A00E01398 /* Deal Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D78B6393139B0CD200F476FB /* Tests */ = {
@@ -619,7 +619,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
 				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deal Me";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -632,7 +632,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
 				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deal Me";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
