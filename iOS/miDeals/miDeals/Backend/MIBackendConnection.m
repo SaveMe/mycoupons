@@ -73,19 +73,21 @@
 
 
 - (void)loginWithDelegate:(id<MILoginDelegate>)delegate {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "sign_in"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL "users/sign_in"]];
     [request setHTTPMethod:@"POST"];
     [request setTimeoutInterval:30];
-    [request setValue:username forHTTPHeaderField:@"username"];
-    [request setValue:password forHTTPHeaderField:@"password"];
+    [request setValue:username forHTTPHeaderField:@"user[email]"];
+    [request setValue:password forHTTPHeaderField:@"user[password]"];
     GDataHTTPFetcher *fetcher = [GDataHTTPFetcher httpFetcherWithRequest:request];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate loginFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         if (![self parseLoginResponseData:data error:&parseError]) {
-            [delegate loginFailedWithError:parseError];            
+            [delegate loginFailedWithError:parseError];    
+            return;
         }
         [delegate loginFinished];
     }];
@@ -100,11 +102,13 @@
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate fetchDealsFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         NSArray *deals = [self parseDealsResponseData:data error:&parseError];
         if (!deals) {
-            [delegate fetchDealsFailedWithError:parseError];            
+            [delegate fetchDealsFailedWithError:parseError];
+            return;
         }
         [delegate fetchDealsFinishedWithDeals:deals];
     }];    
@@ -119,11 +123,13 @@
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (!data) {
             [delegate fetchDealsFailedWithError:error];
+            return;
         }
         NSError *parseError = nil;
         NSArray *deals = [self parseDealsResponseData:data error:&parseError];
         if (!deals) {
-            [delegate fetchDealsFailedWithError:parseError];            
+            [delegate fetchDealsFailedWithError:parseError];
+            return;
         }
         [delegate fetchDealsFinishedWithDeals:deals];
     }];    

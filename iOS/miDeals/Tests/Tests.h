@@ -11,7 +11,7 @@
 
 @interface Tests : SenTestCase<MILoginDelegate, MIFetchDealsDelegate, MIFetchDealDelegate> {
 @private
-    
+    MIBackendConnection *connection;
 }
 
 @end
