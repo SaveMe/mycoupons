@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MICoupon.h"
 
+@class MICoupon;
 @protocol MILoginDelegate, MIFetchDealsDelegate, MIFetchDealDelegate;
 
 @interface MIBackendConnection : NSObject {
 @private
     NSString *username;
     NSString *password;
+    NSString *sessionID;
 }
 - (id)initWithUsername:(NSString *)username password:(NSString *)password;
 + (id)connectionWithUsername:(NSString *)username password:(NSString *)password;

@@ -16,14 +16,16 @@
 @implementation miDealsAppDelegate
 
 
-@synthesize window=_window;
+@synthesize window=_window, connection=_connection;
 
 @synthesize viewController;
 
-- (void)loginViewController:(MILoginViewController*)vc didFinishWithConnection:(MIBackendConnection*)connection{
+- (void)loginViewController:(MILoginViewController*)vc didFinishWithConnection:(MIBackendConnection*)theConnection{
  
-    MICouponsTableViewController* viewController = [[[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
-    UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
+    self.connection = theConnection;
+
+    MICouponsTableViewController* aViewController = [[[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:aViewController] autorelease];
     navController.navigationBar.barStyle = UIBarStyleBlack;
     self.window.rootViewController = navController;
     CATransition* fade = [CATransition animation];
@@ -83,9 +85,11 @@
 
 - (void)dealloc
 {
+    [_connection release];
     [_window release];
     [viewController release];
     [super dealloc];
 }
+
 
 @end
