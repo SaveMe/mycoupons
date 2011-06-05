@@ -39,6 +39,7 @@
     BOOL shouldLogin = [self shouldLogin:&problem];
     if (shouldLogin) {
         connection = [[MIBackendConnection alloc] initWithUsername:usernameTextField.text password:passwordTextField.text];
+        [connection loginWithDelegate:self];
         alert = [UIAlertView showActivityAlertWithTitle:@"Logging in" message:@"Hang on..."];
     } else {
         [UIAlertView showBasicAlertWithTitle:nil message:problem];
