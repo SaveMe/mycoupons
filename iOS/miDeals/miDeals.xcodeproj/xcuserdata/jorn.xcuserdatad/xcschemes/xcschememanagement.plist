@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Upload.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>miDeals.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0AA45128139B1AF9007F4556</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0AD64B7B139AD89A00E01398</key>
 		<dict>
 			<key>primary</key>
