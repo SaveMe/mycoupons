@@ -66,7 +66,8 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-     MICouponDetailsViewController *detailViewController = [[MICouponDetailsViewController alloc] init];
+    MICoupon* coupon = [coupons objectAtIndex:indexPath.row]; 
+    MICouponDetailsViewController *detailViewController = [[MICouponDetailsViewController alloc] initWithCoupon:coupon];
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
 }

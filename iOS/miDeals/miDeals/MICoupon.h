@@ -10,9 +10,13 @@
 
 
 @interface MICoupon : NSObject {
-    
 }
 
 @property (nonatomic, retain) NSString* imageURLString;
+@property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) NSString* subtitle;
+@property (nonatomic, retain) NSDate* expirationDate;
+@property (nonatomic, retain) NSString* desc;
+@property (nonatomic, retain) NSNumber* price;
 
 @end
