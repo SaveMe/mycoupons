@@ -50,6 +50,13 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    UIImageView* backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-background.png"]];
+    backImageView.frame = CGRectMake(0, 44, 320, 416);
+    [self.view insertSubview:backImageView atIndex:0];
+    [backImageView release];
+
+    
     [loginButton setBackgroundImage:[[UIImage imageNamed:@"DealMe-Login-Button.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
 }
 

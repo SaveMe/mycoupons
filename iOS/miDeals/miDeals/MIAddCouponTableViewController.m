@@ -52,13 +52,13 @@
    // cell.textLabel.text = [NSString stringWithFormat:@"Coupon Service No %i", indexPath.row];
     
     switch (indexPath.row) {
-        case 0:
+        case 2:
             cell.imageView.image = [UIImage imageNamed:@"DealMe-Boom-Logo.png"];
             break;
         case 1:
             cell.imageView.image = [UIImage imageNamed:@"DealMe-Buy-Logo.png"];
             break;
-        case 2:
+        case 0:
             cell.imageView.image = [UIImage imageNamed:@"DealMe-Groupon-Logo.png"];
             break;
         case 3:
@@ -115,13 +115,13 @@
     MILoginViewController *detailViewController = [[MILoginViewController alloc] init];
     
     switch (indexPath.row) {
-        case 0:
+        case 2:
             detailViewController.title = @"Bloomspot";
             break;
         case 1:
             detailViewController.title = @"BuyWithMe";
             break;
-        case 2:
+        case 0:
             detailViewController.title = @"Groupon";
             break;
         case 3:
