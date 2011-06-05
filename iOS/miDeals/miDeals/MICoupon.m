@@ -14,7 +14,13 @@
 @synthesize imageURLString, title, subtitle, expirationDate, desc, price;
 
 - (void)dealloc {
-    self.imageURLString = nil;
+    [imageURLString release];
+    [title release];
+    [subtitle release];
+    [expirationDate release];
+    [desc release];
+    [price release];
+    
     [super dealloc];
 }
 

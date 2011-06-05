@@ -75,9 +75,9 @@
 - (void)configureWithCoupon:(MICoupon *)coupon{
     NSURL* url = [NSURL URLWithString:coupon.imageURLString];
     [asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Placeholder.png"]];
-    self.textLabel.text = [NSString stringWithFormat:@"Coupon"];
-    self.detailTextLabel.text = @"Blablasfdsadkdlkashdlaksdhlaskhldkhasfas";
-    dateLabel.text = [[MICouponTableViewCell dateFormatter] stringFromDate:[NSDate date]]; 
+    self.textLabel.text = coupon.title ? coupon.title : @"??";
+    self.detailTextLabel.text = coupon.desc ? coupon.desc : @"";
+    dateLabel.text = [[MICouponTableViewCell dateFormatter] stringFromDate:coupon.expirationDate]; 
 }
 
 @end

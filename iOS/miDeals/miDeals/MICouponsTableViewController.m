@@ -10,16 +10,26 @@
 #import "MIAddCouponTableViewController.h"
 #import "MICouponDetailsViewController.h"
 #import "MICouponTableViewCell.h"
+#import "UIAlertView+NWToolbox.h"
 
 @implementation MICouponsTableViewController
+
+@synthesize connection;
 
 #pragma mark - View lifecycle
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
+        coupons = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)dealloc {
+    [connection release];
+    [alert dismiss];
+    [super dealloc];
 }
 
 - (void)addCouponService:(UIBarButtonItem*)barbuttonItem{
@@ -32,7 +42,14 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     headerView.headerLabel.text = @"My Deals";
+    alert = [UIAlertView showActivityAlertWithTitle:@"Fetching deals" message:@"Hang on..."];
+    
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.connection fetchDealsWithDelegate:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
@@ -46,7 +63,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return [coupons count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -58,7 +75,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;   
     }
     
-    [cell configureWithCoupon:nil];
+    [cell configureWithCoupon:[coupons objectAtIndex:indexPath.row]];
     // Configure the cell...
     return cell;
 }
@@ -71,5 +88,20 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
 }
+
+#pragma mark - MIFetchDealsDelegate
+
+- (void)fetchDealsFinishedWithDeals:(NSArray *)deals {
+    [alert dismiss]; alert = nil;
+    [coupons release];
+    coupons = [deals retain];
+    [self.tableView reloadData];
+}
+
+- (void)fetchDealsFailedWithError:(NSError *)error {
+    [alert dismiss]; alert = nil;
+    [UIAlertView showBasicAlertWithTitle:@"Whoops!" message:[error localizedDescription]];
+}
+
 
 @end
