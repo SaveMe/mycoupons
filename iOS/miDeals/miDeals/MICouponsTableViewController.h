@@ -10,7 +10,7 @@
 #import "MITableViewController.h"
 
 @interface MICouponsTableViewController : MITableViewController {
-    
+    NSArray* coupons;
 }
 
 @end

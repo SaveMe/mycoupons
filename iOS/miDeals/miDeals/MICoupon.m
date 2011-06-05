@@ -11,7 +11,7 @@
 
 @implementation MICoupon
 
-@synthesize imageURLString;
+@synthesize imageURLString, title, subtitle, expirationDate, desc, price;
 
 - (void)dealloc {
     self.imageURLString = nil;

@@ -13,11 +13,27 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.title = @"Deal Me";
     self.tableView.backgroundColor = [UIColor clearColor];
     UIImageView* backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-background.png"]];
     self.tableView.backgroundView = backImageView;
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.28];
     [backImageView release];
+    
+    UIView* headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
+    UIImageView* imageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe-Logo-S.png"]] autorelease];
+    [headerView addSubview:imageView];
+    imageView.frame = CGRectMake(15, 2, 54, 61);
+    headerLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 45)] autorelease];
+    [headerView addSubview:headerLabel];
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.textAlignment = UITextAlignmentCenter;
+    headerLabel.textColor = [UIColor whiteColor];
+    headerLabel.font = [UIFont boldSystemFontOfSize:14];
+    headerLabel.numberOfLines = 0;
+    headerLabel.text = @"More information";
+    self.tableView.tableHeaderView = headerView;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

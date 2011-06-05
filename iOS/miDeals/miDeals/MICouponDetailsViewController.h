@@ -12,9 +12,15 @@
 #import "MICoupon.h"
 
 @interface MICouponDetailsViewController : MIViewController {
-    NWAsyncImageView* asyncImage;
+    IBOutlet UIScrollView *scrollView;
+    IBOutlet NWAsyncImageView *asyncImage;
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UILabel *subTitleLabel;
+    IBOutlet UILabel *descriptionLabel;
 }
 
 @property (nonatomic, retain) MICoupon* coupon;
+- (id)initWithCoupon:(MICoupon *)_coupon;
+
 
 @end

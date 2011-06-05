@@ -36,7 +36,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"Login";
     [usernameTextField becomeFirstResponder];
 }
 

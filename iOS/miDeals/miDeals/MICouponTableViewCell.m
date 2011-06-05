@@ -11,6 +11,16 @@
 
 @implementation MICouponTableViewCell
 
++ (NSDateFormatter*)dateFormatter{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter){
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    }
+    return dateFormatter;
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -21,12 +31,18 @@
         self.textLabel.textColor = [UIColor whiteColor];
         self.textLabel.textColor = [UIColor lightGrayColor];
         self.textLabel.font = [UIFont boldSystemFontOfSize:14];
-        self.textLabel.numberOfLines = 0;
+        self.textLabel.numberOfLines = 1;
         self.accessoryView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DealMe->-icon.png"]] autorelease];
         
-        self.detailTextLabel.textColor = [UIColor lightGrayColor];
-        self.detailTextLabel.numberOfLines = 0;
+        self.detailTextLabel.textColor = [UIColor whiteColor];
+        self.detailTextLabel.numberOfLines = 1;
         self.detailTextLabel.font = [UIFont systemFontOfSize:12];
+        
+        dateLabel = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+        dateLabel.font = [UIFont italicSystemFontOfSize:12];
+        dateLabel.textColor = [UIColor whiteColor];
+        dateLabel.backgroundColor = [UIColor clearColor];
+        [self.contentView addSubview:dateLabel];
     }
     return self;
 }
@@ -34,8 +50,11 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     asyncImageView.frame = CGRectMake(10, 19, 92, 58);
-    self.textLabel.frame = CGRectMake(112, 19, self.contentView.frame.size.width - 120, 32);
-    self.detailTextLabel.frame = CGRectMake(112, 56, self.contentView.frame.size.width - 120, self.contentView.frame.size.height - 60);
+    self.textLabel.frame = CGRectMake(112, 19, self.contentView.frame.size.width - 120, 15);
+   
+  //  CGSize size = [self.detailTextLabel.text sizeWithFont:[self.detailTextLabel font] constrainedToSize:CGSizeMake(self.contentView.frame.size.width - 120, self.contentView.frame.size.height - 60)];
+    self.detailTextLabel.frame = CGRectMake(112, 40, self.contentView.frame.size.width - 120, 15);
+    dateLabel.frame = CGRectMake(112, 60, self.contentView.frame.size.width - 120, 15);
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
@@ -56,7 +75,9 @@
 - (void)configureWithCoupon:(MICoupon *)coupon{
     NSURL* url = [NSURL URLWithString:coupon.imageURLString];
     [asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Placeholder.png"]];
-    self.detailTextLabel.text = @"Blablasfas";
+    self.textLabel.text = [NSString stringWithFormat:@"Coupon"];
+    self.detailTextLabel.text = @"Blablasfdsadkdlkashdlaksdhlaskhldkhasfas";
+    dateLabel.text = [[MICouponTableViewCell dateFormatter] stringFromDate:[NSDate date]]; 
 }
 
 @end

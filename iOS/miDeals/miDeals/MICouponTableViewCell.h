@@ -13,6 +13,7 @@
 
 @interface MICouponTableViewCell : UITableViewCell {
     NWAsyncImageView* asyncImageView;
+    UILabel* dateLabel;
 }
 
 - (void)configureWithCoupon:(MICoupon*)coupon;
