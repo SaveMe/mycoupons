@@ -7,19 +7,37 @@
 //
 
 #import "miDealsAppDelegate.h"
+#import "MIViewController.h"
+#import "MICouponsTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "MIBackendConnection.h"
+
 
 @implementation miDealsAppDelegate
 
 
 @synthesize window=_window;
 
-@synthesize navigationController=_navigationController;
+@synthesize viewController;
+
+- (void)loginViewController:(MILoginViewController*)vc didFinishWithConnection:(MIBackendConnection*)connection{
+ 
+    MICouponsTableViewController* viewController = [[[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
+    navController.navigationBar.barStyle = UIBarStyleBlack;
+    self.window.rootViewController = navController;
+    CATransition* fade = [CATransition animation];
+    fade.type = kCATransitionFade;
+    [self.window.layer addAnimation:fade forKey:nil];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
-    self.window.rootViewController = self.navigationController;
+    viewController.delegate = self;
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -66,7 +84,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_navigationController release];
+    [viewController release];
     [super dealloc];
 }
 
