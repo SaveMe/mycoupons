@@ -27,6 +27,8 @@
 - (void)testBackend {
     MIBackendConnection *connection = [MIBackendConnection connectionWithUsername:@"testuser" password:@"testpass"];
     [connection loginWithDelegate:self];
+    [connection fetchDealsWithDelegate:self];
+    [connection fetchDealsWithDelegate:self];
 }
 
 - (void)loginFinished {
@@ -42,7 +44,7 @@
 }
 
 - (void)fetchDealsFailedWithError:(NSError *)error {
-    
+    STFail(@"dealS failed: %@", error);
 }
 
 - (void)fetchDealFinishedWithDeals:(MICoupon *)deal {
@@ -50,7 +52,7 @@
 }
 
 - (void)fetchDealFailedWithError:(NSError *)error {
-    
+    STFail(@"deal failed: %@", error);
 }
 
 @end

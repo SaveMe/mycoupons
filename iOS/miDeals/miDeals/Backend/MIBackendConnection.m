@@ -56,6 +56,10 @@
     return array;
 }
 
+- (BOOL)isLoggedIn {
+    return sessionID != nil;
+}
+
 - (MICoupon *)parseDealResponseData:(NSData *)data error:(NSError **)error {
     id dictionary = [data objectFromJSONData];
     if(![dictionary isKindOfClass:NSDictionary.class]){

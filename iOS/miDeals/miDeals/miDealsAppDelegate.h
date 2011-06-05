@@ -10,7 +10,7 @@
 #import "MIBackendConnection.h"
 #import "MILoginViewController.h"
 
-@interface miDealsAppDelegate : NSObject <UIApplicationDelegate, MILoginDelegate> {
+@interface miDealsAppDelegate : NSObject <UIApplicationDelegate, MILoginViewControllerDelegate> {
 
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
