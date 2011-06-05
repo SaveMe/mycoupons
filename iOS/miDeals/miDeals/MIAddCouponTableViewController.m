@@ -113,6 +113,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES]; 
     MILoginViewController *detailViewController = [[MILoginViewController alloc] init];
+    switch (indexPath.row) {
+        case 0:
+            detailViewController.title = @"Boom";
+            break;
+        case 1:
+            detailViewController.title = @"Buy";
+            break;
+        case 2:
+            detailViewController.title = @"Groupon";
+            break;
+        case 3:
+        default:
+            detailViewController.title = @"Living";
+            break;
+    }
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
 }
