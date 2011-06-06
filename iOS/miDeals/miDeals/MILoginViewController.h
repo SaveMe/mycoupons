@@ -26,6 +26,7 @@
 @property (nonatomic, readonly) MIBackendConnection* connection;
 
 - (IBAction)loginAction:(id)sender;
+- (void)disableLogin;
 
 @end
 

@@ -103,6 +103,11 @@
     return YES;
 }
 
+- (void)disableLogin {
+    loginButton.enabled = NO;
+}
+
+
 
 #pragma mark -
 #pragma mark MILoginDelegate
@@ -114,7 +119,7 @@
 
 - (void)loginFailedWithError:(NSError*)error {
     [alert dismiss]; alert = nil;
-    [UIAlertView showBasicAlertWithTitle:@"Whoops!" message:[error localizedDescription]];
+ //   [UIAlertView showBasicAlertWithTitle:@"Whoops!" message:[error localizedDescription]];
 }
 
 @end

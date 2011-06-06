@@ -1,26 +1,14 @@
 //
-//  MICouponTableViewCell.m
+//  MIPoolCategoryCell.m
 //  miDeals
 //
-//  Created by Jorn van Dijk on 05-06-11.
+//  Created by User on 6/5/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MICouponTableViewCell.h"
-#import "MICoupon.h"
-#import "MIGeneric.h"
+#import "MIPoolCategoryCell.h"
 
-@implementation MICouponTableViewCell
-
-+ (NSDateFormatter*)dateFormatter{
-    static NSDateFormatter* dateFormatter;
-    if(!dateFormatter){
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-        [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    }
-    return dateFormatter;
-}
+@implementation MIPoolCategoryCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -50,10 +38,10 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    asyncImageView.frame = CGRectMake(10, 19, 92, 58);
-    self.textLabel.frame = CGRectMake(112, 19, self.contentView.frame.size.width - 120, 15);
-   
-  //  CGSize size = [self.detailTextLabel.text sizeWithFont:[self.detailTextLabel font] constrainedToSize:CGSizeMake(self.contentView.frame.size.width - 120, self.contentView.frame.size.height - 60)];
+    asyncImageView.frame = CGRectMake(10, 19, 64, 65);
+    self.textLabel.frame = CGRectMake(112, 40, self.contentView.frame.size.width - 120, 15);
+	
+	//  CGSize size = [self.detailTextLabel.text sizeWithFont:[self.detailTextLabel font] constrainedToSize:CGSizeMake(self.contentView.frame.size.width - 120, self.contentView.frame.size.height - 60)];
     self.detailTextLabel.frame = CGRectMake(112, 40, self.contentView.frame.size.width - 120, 15);
     dateLabel.frame = CGRectMake(112, 60, self.contentView.frame.size.width - 120, 15);
 }
@@ -73,12 +61,32 @@
     [super dealloc];
 }
 
-- (void)configureWithCoupon:(MICoupon *)coupon{
-    NSURL* url = [NSURL URLWithString:coupon.imageURLString];
-    [asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:PlaceHolderImageName(coupon.title)]];
-    self.textLabel.text = coupon.title ? coupon.title : @"??";
-    self.detailTextLabel.text = coupon.desc ? coupon.desc : @"";
-    dateLabel.text = [[MICouponTableViewCell dateFormatter] stringFromDate:coupon.expirationDate]; 
+-(void)configure:(int)nr {
+	NSURL* url;
+	switch (nr) {
+		case 0:
+			url = [NSURL URLWithString:@""];
+			[asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Pool-coffee.png"]];
+			self.textLabel.text = @"Coffee";
+			break;
+		case 1:
+			url = [NSURL URLWithString:@""];
+			[asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Pool-drink.png"]];
+			self.textLabel.text = @"Drink";
+			break;
+		case 2:
+			url = [NSURL URLWithString:@""];
+			[asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Pool-scape.png"]];
+			self.textLabel.text = @"Escape";
+			break;
+		default:
+			url = [NSURL URLWithString:@""];
+			[asyncImageView loadImageFromURL:url  withPlaceHolderImage:[UIImage imageNamed:@"DealMe-Pool-restaurant.png"]];
+			self.textLabel.text = @"Restaurant";
+			break;
+	}
+    self.detailTextLabel.text = @"";
+    // dateLabel.text = [[MICouponTableViewCell dateFormatter] stringFromDate:coupon.expirationDate]; 
 }
 
 @end

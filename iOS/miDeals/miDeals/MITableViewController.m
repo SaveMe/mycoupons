@@ -11,9 +11,10 @@
 
 @implementation MITableViewController
 
+@synthesize myDealCategory;
 
 - (void)__setup{
-    self.title = @"Deal Me";
+    // self.title = @"My Deals";
     UIImage* backArrowImage = [UIImage imageNamed:@"NWBackArrow.png"];
     UIBarButtonItem* barbuttonItem = [[UIBarButtonItem alloc] initWithImage:backArrowImage style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = [barbuttonItem autorelease];
@@ -27,9 +28,18 @@
     return self;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style {
+- (id)initWithStyle:(UITableViewStyle)style Category:(int)cat {
     self = [super initWithStyle:style];
     if (self) {
+		myDealCategory = cat;
+		switch (cat) {
+			case -1:
+				self.title = @"My Deals";
+				break;
+			case -2:
+				self.title = @"Deal Pool";
+				break;
+		}
         [self __setup];
     }
     return self;
@@ -43,9 +53,11 @@
     self.tableView.backgroundView = backImageView;
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.28];
     [backImageView release];
-    
-    headerView = [[[MIHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
-    self.tableView.tableHeaderView = headerView;
+	
+	if (myDealCategory < 0) {
+      headerView = [[[MIHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 65)] autorelease];
+      self.tableView.tableHeaderView = headerView;
+	}
     
 }
 

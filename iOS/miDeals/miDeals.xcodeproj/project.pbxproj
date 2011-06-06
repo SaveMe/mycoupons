@@ -11,7 +11,6 @@
 		0AA450F1139B0C68007F4556 /* DealMe-Field.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA450EF139B0C68007F4556 /* DealMe-Field.png */; };
 		0AA450F2139B0C68007F4556 /* DealMe-Login-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA450F0139B0C68007F4556 /* DealMe-Login-Button.png */; };
 		0AA450F6139B102E007F4556 /* MITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA450F5139B102E007F4556 /* MITextField.m */; };
-		0AA45100139B1754007F4556 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA450FF139B1754007F4556 /* Default.png */; };
 		0AA45130139B1F49007F4556 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4512F139B1F49007F4556 /* Icon.png */; };
 		0AD64B81139AD89A00E01398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B80139AD89A00E01398 /* UIKit.framework */; };
 		0AD64B83139AD89A00E01398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD64B82139AD89A00E01398 /* Foundation.framework */; };
@@ -67,6 +66,30 @@
 		D78B639D139B0CD300F476FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D78B639B139B0CD300F476FB /* InfoPlist.strings */; };
 		D78B63A0139B0CD300F476FB /* Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = D78B639F139B0CD300F476FB /* Tests.h */; };
 		D78B63A2139B0CD300F476FB /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B63A1139B0CD300F476FB /* Tests.m */; };
+		EC0CA8FF139C558700A45DCB /* fake-pool-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0CA8FE139C558700A45DCB /* fake-pool-data.plist */; };
+		EC0CA901139C559A00A45DCB /* DealMe-Pool-scape.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0CA900139C559A00A45DCB /* DealMe-Pool-scape.png */; };
+		EC0CA903139C594D00A45DCB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0CA902139C594D00A45DCB /* Default@2x.png */; };
+		FC10D3C1139C488800888787 /* DealMe-Pool-coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = FC10D3BD139C488800888787 /* DealMe-Pool-coffee.png */; };
+		FC10D3C2139C488800888787 /* DealMe-Pool-drink.png in Resources */ = {isa = PBXBuildFile; fileRef = FC10D3BE139C488800888787 /* DealMe-Pool-drink.png */; };
+		FC10D3C3139C488800888787 /* DealMe-Pool-fast-food.png in Resources */ = {isa = PBXBuildFile; fileRef = FC10D3BF139C488800888787 /* DealMe-Pool-fast-food.png */; };
+		FC10D3C4139C488800888787 /* DealMe-Pool-restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = FC10D3C0139C488800888787 /* DealMe-Pool-restaurant.png */; };
+		FCDBE519139C17C10022E028 /* MIPoolTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDBE518139C17C10022E028 /* MIPoolTableViewController.xib */; };
+		FCDBE544139C19570022E028 /* MIPoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDBE543139C19570022E028 /* MIPoolTableViewController.m */; };
+		FCDBE59C139C20A30022E028 /* MIPoolCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDBE59B139C20A30022E028 /* MIPoolCategoryCell.m */; };
+		FCDBE5CF139C24D60022E028 /* MIPoolDealsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDBE5CE139C24D60022E028 /* MIPoolDealsTableViewController.m */; };
+		FCFA1C49139C2FEA0053C079 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C40139C2FEA0053C079 /* Default.png */; };
+		FCFA1C4A139C2FEA0053C079 /* DealMe-My-Deals-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C41139C2FEA0053C079 /* DealMe-My-Deals-Button.png */; };
+		FCFA1C4B139C2FEA0053C079 /* DealMe-Placeholder-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C42139C2FEA0053C079 /* DealMe-Placeholder-1.png */; };
+		FCFA1C4C139C2FEA0053C079 /* DealMe-Placeholder-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C43139C2FEA0053C079 /* DealMe-Placeholder-2.png */; };
+		FCFA1C4D139C2FEA0053C079 /* DealMe-Placeholder-3.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C44139C2FEA0053C079 /* DealMe-Placeholder-3.png */; };
+		FCFA1C4E139C2FEA0053C079 /* DealMe-Placeholder-4.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C45139C2FEA0053C079 /* DealMe-Placeholder-4.png */; };
+		FCFA1C4F139C2FEA0053C079 /* DealMe-Pool-L-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C46139C2FEA0053C079 /* DealMe-Pool-L-Button.png */; };
+		FCFA1C50139C2FEA0053C079 /* DealMe-Pool-S-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C47139C2FEA0053C079 /* DealMe-Pool-S-Button.png */; };
+		FCFA1C51139C2FEA0053C079 /* DealMe-Token.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1C48139C2FEA0053C079 /* DealMe-Token.png */; };
+		FCFA1C96139C359D0053C079 /* MIGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFA1C95139C359D0053C079 /* MIGeneric.m */; };
+		FCFA1D91139C41F50053C079 /* DealMe-Donate-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1D8E139C41F50053C079 /* DealMe-Donate-Button.png */; };
+		FCFA1D92139C41F50053C079 /* DealMe-Lock-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1D8F139C41F50053C079 /* DealMe-Lock-Button.png */; };
+		FCFA1D93139C41F50053C079 /* DealMe-UnLock-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA1D90139C41F50053C079 /* DealMe-UnLock-Button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +108,6 @@
 		0AA450F0139B0C68007F4556 /* DealMe-Login-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Login-Button.png"; sourceTree = "<group>"; };
 		0AA450F4139B102E007F4556 /* MITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITextField.h; sourceTree = "<group>"; };
 		0AA450F5139B102E007F4556 /* MITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITextField.m; sourceTree = "<group>"; };
-		0AA450FF139B1754007F4556 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0AA4512F139B1F49007F4556 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0AD64B7C139AD89A00E01398 /* Deal Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deal Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD64B80139AD89A00E01398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -168,6 +190,34 @@
 		D78B639E139B0CD300F476FB /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		D78B639F139B0CD300F476FB /* Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tests.h; sourceTree = "<group>"; };
 		D78B63A1139B0CD300F476FB /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		EC0CA8FE139C558700A45DCB /* fake-pool-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "fake-pool-data.plist"; sourceTree = "<group>"; };
+		EC0CA900139C559A00A45DCB /* DealMe-Pool-scape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-scape.png"; sourceTree = "<group>"; };
+		EC0CA902139C594D00A45DCB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FC10D3BD139C488800888787 /* DealMe-Pool-coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-coffee.png"; sourceTree = "<group>"; };
+		FC10D3BE139C488800888787 /* DealMe-Pool-drink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-drink.png"; sourceTree = "<group>"; };
+		FC10D3BF139C488800888787 /* DealMe-Pool-fast-food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-fast-food.png"; sourceTree = "<group>"; };
+		FC10D3C0139C488800888787 /* DealMe-Pool-restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-restaurant.png"; sourceTree = "<group>"; };
+		FCDBE518139C17C10022E028 /* MIPoolTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIPoolTableViewController.xib; sourceTree = "<group>"; };
+		FCDBE542139C19570022E028 /* MIPoolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPoolTableViewController.h; sourceTree = "<group>"; };
+		FCDBE543139C19570022E028 /* MIPoolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPoolTableViewController.m; sourceTree = "<group>"; };
+		FCDBE59A139C20A30022E028 /* MIPoolCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPoolCategoryCell.h; sourceTree = "<group>"; };
+		FCDBE59B139C20A30022E028 /* MIPoolCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPoolCategoryCell.m; sourceTree = "<group>"; };
+		FCDBE5CD139C24D60022E028 /* MIPoolDealsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPoolDealsTableViewController.h; sourceTree = "<group>"; };
+		FCDBE5CE139C24D60022E028 /* MIPoolDealsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPoolDealsTableViewController.m; sourceTree = "<group>"; };
+		FCFA1C40139C2FEA0053C079 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FCFA1C41139C2FEA0053C079 /* DealMe-My-Deals-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-My-Deals-Button.png"; sourceTree = "<group>"; };
+		FCFA1C42139C2FEA0053C079 /* DealMe-Placeholder-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder-1.png"; sourceTree = "<group>"; };
+		FCFA1C43139C2FEA0053C079 /* DealMe-Placeholder-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder-2.png"; sourceTree = "<group>"; };
+		FCFA1C44139C2FEA0053C079 /* DealMe-Placeholder-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder-3.png"; sourceTree = "<group>"; };
+		FCFA1C45139C2FEA0053C079 /* DealMe-Placeholder-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Placeholder-4.png"; sourceTree = "<group>"; };
+		FCFA1C46139C2FEA0053C079 /* DealMe-Pool-L-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-L-Button.png"; sourceTree = "<group>"; };
+		FCFA1C47139C2FEA0053C079 /* DealMe-Pool-S-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Pool-S-Button.png"; sourceTree = "<group>"; };
+		FCFA1C48139C2FEA0053C079 /* DealMe-Token.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Token.png"; sourceTree = "<group>"; };
+		FCFA1C94139C359D0053C079 /* MIGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIGeneric.h; sourceTree = "<group>"; };
+		FCFA1C95139C359D0053C079 /* MIGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIGeneric.m; sourceTree = "<group>"; };
+		FCFA1D8E139C41F50053C079 /* DealMe-Donate-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Donate-Button.png"; sourceTree = "<group>"; };
+		FCFA1D8F139C41F50053C079 /* DealMe-Lock-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-Lock-Button.png"; sourceTree = "<group>"; };
+		FCFA1D90139C41F50053C079 /* DealMe-UnLock-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DealMe-UnLock-Button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +310,15 @@
 				0AD64BFA139AE83200E01398 /* MICouponTableViewCell.m */,
 				0AD64C62139AF27700E01398 /* MIAddCouponTableViewCell.h */,
 				0AD64C63139AF27800E01398 /* MIAddCouponTableViewCell.m */,
+				FCDBE518139C17C10022E028 /* MIPoolTableViewController.xib */,
+				FCDBE542139C19570022E028 /* MIPoolTableViewController.h */,
+				FCDBE543139C19570022E028 /* MIPoolTableViewController.m */,
+				FCDBE59A139C20A30022E028 /* MIPoolCategoryCell.h */,
+				FCDBE59B139C20A30022E028 /* MIPoolCategoryCell.m */,
+				FCDBE5CD139C24D60022E028 /* MIPoolDealsTableViewController.h */,
+				FCDBE5CE139C24D60022E028 /* MIPoolDealsTableViewController.m */,
+				FCFA1C94139C359D0053C079 /* MIGeneric.h */,
+				FCFA1C95139C359D0053C079 /* MIGeneric.m */,
 			);
 			path = miDeals;
 			sourceTree = "<group>";
@@ -323,9 +382,27 @@
 		0AD64C4B139AED2600E01398 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EC0CA8FE139C558700A45DCB /* fake-pool-data.plist */,
+				FC10D3BD139C488800888787 /* DealMe-Pool-coffee.png */,
+				FC10D3BE139C488800888787 /* DealMe-Pool-drink.png */,
+				FC10D3BF139C488800888787 /* DealMe-Pool-fast-food.png */,
+				FC10D3C0139C488800888787 /* DealMe-Pool-restaurant.png */,
+				FCFA1D8E139C41F50053C079 /* DealMe-Donate-Button.png */,
+				FCFA1D8F139C41F50053C079 /* DealMe-Lock-Button.png */,
+				FCFA1D90139C41F50053C079 /* DealMe-UnLock-Button.png */,
+				EC0CA900139C559A00A45DCB /* DealMe-Pool-scape.png */,
+				FCFA1C40139C2FEA0053C079 /* Default.png */,
+				EC0CA902139C594D00A45DCB /* Default@2x.png */,
+				FCFA1C41139C2FEA0053C079 /* DealMe-My-Deals-Button.png */,
+				FCFA1C42139C2FEA0053C079 /* DealMe-Placeholder-1.png */,
+				FCFA1C43139C2FEA0053C079 /* DealMe-Placeholder-2.png */,
+				FCFA1C44139C2FEA0053C079 /* DealMe-Placeholder-3.png */,
+				FCFA1C45139C2FEA0053C079 /* DealMe-Placeholder-4.png */,
+				FCFA1C46139C2FEA0053C079 /* DealMe-Pool-L-Button.png */,
+				FCFA1C47139C2FEA0053C079 /* DealMe-Pool-S-Button.png */,
+				FCFA1C48139C2FEA0053C079 /* DealMe-Token.png */,
 				0A8124FA139B208500EA8B20 /* Icon@2x.png */,
 				0AA4512F139B1F49007F4556 /* Icon.png */,
-				0AA450FF139B1754007F4556 /* Default.png */,
 				0AA450EF139B0C68007F4556 /* DealMe-Field.png */,
 				0AA450F0139B0C68007F4556 /* DealMe-Login-Button.png */,
 				0AD64C71139B06A800E01398 /* NWBackArrow.png */,
@@ -466,9 +543,28 @@
 				0AD64C72139B06A900E01398 /* NWBackArrow.png in Resources */,
 				0AA450F1139B0C68007F4556 /* DealMe-Field.png in Resources */,
 				0AA450F2139B0C68007F4556 /* DealMe-Login-Button.png in Resources */,
-				0AA45100139B1754007F4556 /* Default.png in Resources */,
 				0AA45130139B1F49007F4556 /* Icon.png in Resources */,
 				0A8124FB139B208500EA8B20 /* Icon@2x.png in Resources */,
+				FCDBE519139C17C10022E028 /* MIPoolTableViewController.xib in Resources */,
+				FCFA1C49139C2FEA0053C079 /* Default.png in Resources */,
+				FCFA1C4A139C2FEA0053C079 /* DealMe-My-Deals-Button.png in Resources */,
+				FCFA1C4B139C2FEA0053C079 /* DealMe-Placeholder-1.png in Resources */,
+				FCFA1C4C139C2FEA0053C079 /* DealMe-Placeholder-2.png in Resources */,
+				FCFA1C4D139C2FEA0053C079 /* DealMe-Placeholder-3.png in Resources */,
+				FCFA1C4E139C2FEA0053C079 /* DealMe-Placeholder-4.png in Resources */,
+				FCFA1C4F139C2FEA0053C079 /* DealMe-Pool-L-Button.png in Resources */,
+				FCFA1C50139C2FEA0053C079 /* DealMe-Pool-S-Button.png in Resources */,
+				FCFA1C51139C2FEA0053C079 /* DealMe-Token.png in Resources */,
+				FCFA1D91139C41F50053C079 /* DealMe-Donate-Button.png in Resources */,
+				FCFA1D92139C41F50053C079 /* DealMe-Lock-Button.png in Resources */,
+				FCFA1D93139C41F50053C079 /* DealMe-UnLock-Button.png in Resources */,
+				FC10D3C1139C488800888787 /* DealMe-Pool-coffee.png in Resources */,
+				FC10D3C2139C488800888787 /* DealMe-Pool-drink.png in Resources */,
+				FC10D3C3139C488800888787 /* DealMe-Pool-fast-food.png in Resources */,
+				FC10D3C4139C488800888787 /* DealMe-Pool-restaurant.png in Resources */,
+				EC0CA8FF139C558700A45DCB /* fake-pool-data.plist in Resources */,
+				EC0CA901139C559A00A45DCB /* DealMe-Pool-scape.png in Resources */,
+				EC0CA903139C594D00A45DCB /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +625,10 @@
 				0AD64C75139B072F00E01398 /* MIHeaderView.m in Sources */,
 				0AA450F6139B102E007F4556 /* MITextField.m in Sources */,
 				D78B635E139B08C800F476FB /* JSONKit.m in Sources */,
+				FCDBE544139C19570022E028 /* MIPoolTableViewController.m in Sources */,
+				FCDBE59C139C20A30022E028 /* MIPoolCategoryCell.m in Sources */,
+				FCDBE5CF139C24D60022E028 /* MIPoolDealsTableViewController.m in Sources */,
+				FCFA1C96139C359D0053C079 /* MIGeneric.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +690,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Martijn The (WMK4PFZD6Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gustavo Ambrozio (ZDM9Q8QJ4N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gustavo Ambrozio (ZDM9Q8QJ4N)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -599,7 +700,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CA81356C-C965-4AC5-9E4D-D093DE57C6BF";
+				PROVISIONING_PROFILE = "5F86A88F-2C41-4297-90E2-2C9DA402B5C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5F86A88F-2C41-4297-90E2-2C9DA402B5C4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -608,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gustavo Ambrozio (ZDM9Q8QJ4N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -615,6 +718,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "5F86A88F-2C41-4297-90E2-2C9DA402B5C4";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -628,6 +732,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
 				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "Deal Me";
 				WRAPPER_EXTENSION = app;
 			};
@@ -641,6 +747,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miDeals/miDeals-Prefix.pch";
 				INFOPLIST_FILE = "miDeals/miDeals-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = "Deal Me";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
