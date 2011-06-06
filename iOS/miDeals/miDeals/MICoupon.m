@@ -11,7 +11,7 @@
 
 @implementation MICoupon
 
-@synthesize imageURLString, title, subtitle, expirationDate, desc, price;
+@synthesize imageURLString, title, subtitle, expirationDate, desc, price, locked;
 
 - (void)dealloc {
     [imageURLString release];
@@ -20,6 +20,7 @@
     [expirationDate release];
     [desc release];
     [price release];
+	[locked release];
     
     [super dealloc];
 }

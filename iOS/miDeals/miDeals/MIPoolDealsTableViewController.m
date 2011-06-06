@@ -1,10 +1,13 @@
 //
-//  MICouponsTableViewController.m
+//  MIPoolDealsTableViewController.m
 //  miDeals
 //
-//  Created by Jorn van Dijk on 04-06-11.
+//  Created by User on 6/5/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
+
+#import "MIPoolDealsTableViewController.h"
+
 
 #import "MICouponsTableViewController.h"
 #import "MIAddCouponTableViewController.h"
@@ -13,17 +16,45 @@
 #import "UIAlertView+NWToolbox.h"
 #import "MIPoolTableViewController.h"
 
-@implementation MICouponsTableViewController
+@implementation MIPoolDealsTableViewController
 
 @synthesize connection;
 
 #pragma mark - View lifecycle
 
-- (id)initWithStyle:(UITableViewStyle)style {
+- (id)initWithStyle:(UITableViewStyle)style Category:(int)cat {
     self = [super initWithStyle:style];
     if (self) {
         coupons = [[NSMutableArray alloc] init];
-    }
+        NSDictionary *fakeData = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fake-pool-data" ofType:@"plist"]];
+        
+        NSArray *couponsFakeData;
+		switch (cat) {
+			case 0:
+				self.title = @"Coffee Deal Pool";
+                couponsFakeData = [fakeData objectForKey:@"coffee"];
+				break;
+			case 1:
+				self.title = @"Drink Deal Pool";
+                couponsFakeData = [fakeData objectForKey:@"drink"];
+				break;
+			case 2:
+				self.title = @"Escape Deal Pool";
+                couponsFakeData = [fakeData objectForKey:@"escape"];
+				break;
+			case 3:
+				self.title = @"Restaurant Deal Pool";
+                couponsFakeData = [fakeData objectForKey:@"eat"];
+				break;
+		}
+        
+        for (NSDictionary *properties in couponsFakeData) {
+            MICoupon *coupon = [[MICoupon alloc] init];
+            coupon.title = [properties objectForKey:@"title"];
+            coupon.desc = [properties objectForKey:@"desc"];
+            [coupons addObject:coupon];
+        }
+	}
     return self;
 }
 
@@ -34,7 +65,7 @@
 }
 
 - (void)addCouponService:(UIBarButtonItem*)barbuttonItem{
-    MIAddCouponTableViewController* viewController = [[[MIAddCouponTableViewController alloc] initWithStyle:UITableViewStylePlain Category:-1] autorelease];
+    MIAddCouponTableViewController* viewController = [[[MIAddCouponTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
     UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
     navController.navigationBar.barStyle = UIBarStyleBlack;
     [self presentModalViewController:navController animated:YES];
@@ -42,30 +73,29 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
     // headerView.headerLabel.text = @"My Deals";
 	//[headerView.poolButton setTitle:@"Pool" forState:UIControlStateNormal];
-	[headerView.poolButton setBackgroundImage:[UIImage imageNamed:@"DealMe-Pool-L-Button.png"] forState:UIControlStateNormal];
-	[headerView.poolButton addTarget:self action:@selector(poolButtonPress) forControlEvents:UIControlEventTouchUpInside];
+	//[headerView.poolButton addTarget:self action:@selector(poolButtonPress) forControlEvents:UIControlEventTouchUpInside];
 	
-    alert = [UIAlertView showActivityAlertWithTitle:@"Fetching deals" message:@"Hang on..."];
+    //alert = [UIAlertView showActivityAlertWithTitle:@"Fetching deals" message:@"Hang on..."];
     
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
+    //self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCouponService:)] autorelease];
 }
 
 
 - (void)poolButtonPress {
-//	[self dismissModalViewControllerAnimated:NO];
-	
-    MIPoolTableViewController* viewController = [[[MIPoolTableViewController alloc] initWithStyle:UITableViewStylePlain Category:-2] autorelease];
+	//	[self dismissModalViewControllerAnimated:NO];
+    MIPoolTableViewController* viewController = [[[MIPoolTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
     UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
     navController.navigationBar.barStyle = UIBarStyleBlack;
     [self presentModalViewController:navController animated:YES];
-	
 }
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.connection fetchDealsWithDelegate:self];
+    // [self.connection fetchDealsWithDelegate:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
@@ -101,23 +131,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MICoupon* coupon = [coupons objectAtIndex:indexPath.row]; 
     MICouponDetailsViewController *detailViewController = [[MICouponDetailsViewController alloc] initWithCoupon:coupon NavController:self.navigationController];
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
+	[self.navigationController pushViewController:detailViewController animated:YES];
+	[detailViewController release];
 }
-
-#pragma mark - MIFetchDealsDelegate
-
-- (void)fetchDealsFinishedWithDeals:(NSArray *)deals {
-    [alert dismiss]; alert = nil;
-    [coupons release];
-    coupons = [deals retain];
-    [self.tableView reloadData];
-}
-
-- (void)fetchDealsFailedWithError:(NSError *)error {
-    [alert dismiss]; alert = nil;
-    [UIAlertView showBasicAlertWithTitle:@"Whoops!" message:[error localizedDescription]];
-}
-
 
 @end

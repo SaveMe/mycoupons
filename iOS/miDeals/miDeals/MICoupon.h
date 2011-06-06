@@ -16,6 +16,7 @@
     NSDate* expirationDate;
     NSString* desc;
     NSNumber* price;
+	NSNumber* locked;
 }
 
 @property (nonatomic, retain) NSString* imageURLString;
@@ -24,5 +25,6 @@
 @property (nonatomic, retain) NSDate* expirationDate;
 @property (nonatomic, retain) NSString* desc;
 @property (nonatomic, retain) NSNumber* price;
+@property (nonatomic, retain) NSNumber* locked;
 
 @end

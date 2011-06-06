@@ -20,10 +20,16 @@
     IBOutlet UILabel *descriptionLabel;
     IBOutlet NWAsyncImageView *couponCodeImageView;
     IBOutlet UILabel *couponCodeLabel;
+
+	IBOutlet UIButton *lockButton;
+	IBOutlet UIButton *donateButton;
+	
+	UINavigationController *navCtrl;
 }
 
 @property (nonatomic, retain) MICoupon* coupon;
-- (id)initWithCoupon:(MICoupon *)_coupon;
-
+- (id)initWithCoupon:(MICoupon *)_coupon NavController:(UINavigationController *)_navCtrl;
+-(IBAction)lockButtonPress:(id)sender;
+-(IBAction)donateButtonPress:(id)sender;
 
 @end

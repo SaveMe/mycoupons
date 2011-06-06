@@ -24,7 +24,7 @@
  
     self.connection = theConnection;
 
-    MICouponsTableViewController* aViewController = [[[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    MICouponsTableViewController* aViewController = [[[MICouponsTableViewController alloc] initWithStyle:UITableViewStylePlain Category:-1] autorelease];
     aViewController.connection = theConnection;
     UINavigationController* navController = [[[UINavigationController alloc] initWithRootViewController:aViewController] autorelease];
     navController.navigationBar.barStyle = UIBarStyleBlack;

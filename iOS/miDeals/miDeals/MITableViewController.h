@@ -13,4 +13,8 @@
     MIHeaderView* headerView;
 }
 
+@property int myDealCategory;
+
+- (id)initWithStyle:(UITableViewStyle)style Category:(int)cat;
+
 @end

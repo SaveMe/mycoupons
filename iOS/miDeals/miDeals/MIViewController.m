@@ -12,7 +12,7 @@
 @implementation MIViewController
 
 - (void)__setup{
-    self.title = @"Deal Me";
+    //self.title = @"My Deals";
     UIImage* backArrowImage = [UIImage imageNamed:@"NWBackArrow.png"];
     UIBarButtonItem* barbuttonItem = [[UIBarButtonItem alloc] initWithImage:backArrowImage style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = [barbuttonItem autorelease];

@@ -10,8 +10,11 @@
 
 
 @interface MIHeaderView : UIView {
-    
+	NSTimer *tokenUpdateTimer;
 }
 
-@property (nonatomic, retain) UILabel* headerLabel;
+//@property (nonatomic, retain) UILabel* headerLabel;
+@property (nonatomic, retain) UILabel* tokenCountLabel;
+@property (nonatomic, retain) UIButton* poolButton;
+
 @end
