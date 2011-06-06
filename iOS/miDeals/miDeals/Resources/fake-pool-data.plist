@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>drink</key>
+	<array>
+		<dict>
+			<key>desc</key>
+			<string>Martini Madness at Momo&apos;s</string>
+			<key>title</key>
+			<string>$50 worth of vodka and olives</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Martini bigger than your head</string>
+			<key>title</key>
+			<string>Blondies bar &amp; no grill</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Bourbon &amp; Branch</string>
+			<key>title</key>
+			<string>Wicked Wiskey</string>
+		</dict>
+	</array>
+	<key>coffee</key>
+	<array>
+		<dict>
+			<key>desc</key>
+			<string>Four Barrel Binge</string>
+			<key>title</key>
+			<string>Best coffee in San Francisco</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Starbuck Slut</string>
+			<key>title</key>
+			<string>Frappaccino por Vou</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Ritual Roaster beans</string>
+			<key>title</key>
+			<string>alb of African Beans</string>
+		</dict>
+	</array>
+	<key>eat</key>
+	<array>
+		<dict>
+			<key>desc</key>
+			<string>$70 @ Flour &amp; Water</string>
+			<key>title</key>
+			<string>Hip &amp; Hot Pasta &amp; Pizza</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>$100 @ Frances</string>
+			<key>title</key>
+			<string>Dinner at the most delightful spot in San Francisco</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Casa de las Madres</string>
+			<key>title</key>
+			<string>Vegan Raw Mexican</string>
+		</dict>
+	</array>
+	<key>escape</key>
+	<array>
+		<dict>
+			<key>desc</key>
+			<string>Wonderful weekend in Napa</string>
+			<key>title</key>
+			<string>Weekend in Napa</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>Nice surfing trip</string>
+			<key>title</key>
+			<string>Surf in Hawaii</string>
+		</dict>
+		<dict>
+			<key>desc</key>
+			<string>One week in Rio!</string>
+			<key>title</key>
+			<string>Escape to South America</string>
+		</dict>
+	</array>
+</dict>
+</plist>

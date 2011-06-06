@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    headerView.headerLabel.text = @"Add Accounts";
+    //headerView.headerLabel.text = @"Add Accounts";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAddCoupon:)] autorelease];
 }
 
@@ -131,6 +131,7 @@
     }
     
     [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController disableLogin];
     [detailViewController release];
 }
 
